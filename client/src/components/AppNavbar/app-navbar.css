@@ -8,7 +8,7 @@
     /* FBA1B7 6C5F5B*/
     --font-color-navbar-title: #6C5F5B;
     --font-color-navbar-anchors: #434242;
-    --font-color-input-bar: "";
+    --font-color-input-bar: #6C5F5B;
     --font-color-page-title: "";
     --font-color-page-body:#434242;
 
@@ -30,6 +30,7 @@
     display: grid;
     grid-template-columns: 15% 33% 52%;
     width: 98.8vw;
+    background-color: #fff;
     transition: 0.8s ease;
     border-bottom: 1px solid rgba(193, 193, 193, 0);
     padding-top: 11px;
@@ -53,6 +54,7 @@
 }
 .app-navbar > div > div > input {
     font-size: 18px;
+    color: var(--font-color-input-bar);
     height: 40px;
     width: 320px;
     outline: none;
@@ -99,9 +101,10 @@
 .searchbar-centered{
     /* background-color: aqua; */
     position: fixed;
+    /* width: 400px; */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     z-index: 9999;
 
     display: flex;
@@ -140,9 +143,9 @@
     left: 0;
     width: 98.8vw;
     padding-block: 11px;
-    /* background-color: rgba(67, 67, 67, 0.621); */
+    background-color: #fff;
     /* border-bottom: 1px solid rgb(222, 220, 220);; */
     box-shadow: -3px 3px 4px rgba(183, 182, 182, 0.554);
     /* box-shadow: -3px 3px 3px #6c5f5b34 ; */
-    z-index: 1000;
+    z-index: 9000;
 }

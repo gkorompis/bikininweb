@@ -37,10 +37,6 @@
   }
 } */
 
-.app-pages{
-  margin: 0px;
-  padding: 0px;
-}
 @font-face {
   font-family: idayara;
   src: url("./assets/fonts/IdayaraRegular-nRaVP.ttf") format("truetype");
@@ -68,4 +64,18 @@
 @font-face {
   font-family: poppinsreg;
   src: url("./assets/fonts/PoppinsRegular-B2Bw.otf") format("opentype");
+}
+body {
+  background-color: #fff;
+  font-family: poppinsreg;
+}
+h1 {
+  padding: 0px;
+  margin: 0px;
+  letter-spacing: 2px;
+}
+
+.app-pages {
+  margin: 0px;
+  padding: 0px;
 }

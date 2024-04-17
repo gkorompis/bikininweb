@@ -22,10 +22,13 @@ const AppNavbar = () =>{
         <>
             <nav className={"app-navbar " + (scrolled ? "navbar-fixed" : "")} >
                 <div>
-                    <h1>bikinin!</h1>
+                    <h1>bikinin</h1>
                 </div>
                 <div>
-                    <input className={"navbar-searchbar " + (scrolled ? "" : "searchbar-centered")} placeholder="bikinin website kaya gimana?"/>
+                    <div className={scrolled ? "" : "searchbar-centered"}>
+                        <input className={"navbar-searchbar " } placeholder="mau bikin website apa?"/>
+                        <button className="">cari design</button>
+                    </div>
                 </div>
                 <div>
                     <ul className="app-navbar-ul">

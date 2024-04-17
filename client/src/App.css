@@ -41,3 +41,31 @@
   margin: 0px;
   padding: 0px;
 }
+@font-face {
+  font-family: idayara;
+  src: url("./assets/fonts/IdayaraRegular-nRaVP.ttf") format("truetype");
+}
+@font-face {
+  font-family: rudiment;
+  src: url("./assets/fonts/Rudiment-0gwP.ttf") format("truetype");
+}
+@font-face {
+  font-family: rubberduck;
+  src: url("./assets/fonts/RubberDuckiesMedium-Ka1Z.otf") format("opentype");
+}
+@font-face {
+  font-family: sayfull;
+  src: url("./assets/fonts/Sayfull-n8r0.ttf") format("truetype");
+}
+@font-face {
+  font-family: sundaydonut;
+  src: url("./assets/fonts/SundayDonuts-8MoYz.otf") format("opentype");
+}
+@font-face {
+  font-family: wintercoffee;
+  src: url("./assets/fonts/WinterCoffee-EaDM8.otf") format("opentype");
+}
+@font-face {
+  font-family: poppinsreg;
+  src: url("./assets/fonts/PoppinsRegular-B2Bw.otf") format("opentype");
+}

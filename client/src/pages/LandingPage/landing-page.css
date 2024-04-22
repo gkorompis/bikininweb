@@ -34,19 +34,47 @@
     width:100%;
     overflow-x: auto;
     flex-wrap: nowrap !important;
-
     padding-block: 30px;
-
 }
 .conveyor-item{
-    border: 4px dashed rgb(93, 93, 93);
-    border-radius: 50%;
+    /* border: 4px dashed rgb(93, 93, 93); */
+    /* border-radius: 50%; */
+    
     /* background-color: aqua; */
     width: 130px;
     height: 130px;
-    margin-right: 80px;
+    margin-right: 60px;
     flex-shrink: 0;
     cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.hex-layers-wrap{
+    height: 100px;
+    width: 100px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hex-layers{
+    height: 24%;
+    width: 98%;
+    
+    /* border: 1px solid black; */
+}
+.layer-1{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.layer-4 {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 .section-show{
@@ -80,14 +108,137 @@
 .sliding-content {
     white-space: nowrap;
     /* Ensure contents stay in one line */
-    animation: slide 18s linear infinite;
+    /* animation: slide 18s linear infinite; */
     /* Apply animation with a duration of 5 seconds, linear timing and infinite repeat */
 }
 .conveyor:hover .sliding-content {
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
     /* Pause the animation when .sliding-element is hovered */
     transform: translateX(0);
     /* Bring the content to the initial position */
     overflow-x: auto;
     /* Allow horizontal scrolling when hovered */
 }
+
+
+h6{
+    color: #bb9cc081;
+}
+
+/* body {
+    background-color: black;
+}
+.app-navbar, .app-navbar > div > div > input {
+    background-color: black;
+    color: #fff !important;
+}
+.searchbar-centered > button {
+    background-color: black;
+}
+
+.app-navbar>div>h1 {
+    color: pink;
+} */
+/* 
+1. body bgcolor + color
+2. app-nabvar.,navbar-searchbar bg color + color
+3. searchbar-centered > button bg color + color
+4. app-nabvar>div>h1 color
+ */
+/* or .navbar-searchbar */
+
+/* level 1 background and banner*/
+/* body {
+    background-color: #222831;
+} */
+/* .app-navbar{
+    background-color: #222831;
+} */
+/* .app-navbar > div > div input{
+    background-color: #222831;
+} */
+
+/* color 2 */
+/* .app-navbar>div>div button {
+    background-color: #31363F;
+}
+.app-navbar>div>div button:hover {
+    background-color: #76ABAE;
+} */
+
+
+/* color 3 button or banner on tops */
+/* .app-navbar > div > div button {
+    background-color: #76ABAE;
+} */
+/* .app-navbar>div>div>input {
+    border: 0.7px solid #76abae2c ;
+} */
+
+
+/* .searchbar-centered input {
+    box-shadow: 2px 2px 3px #76abae2b;
+} */
+
+/* color 4 text */
+/* 3 to pink */
+.h6{
+    color: #f3d0d733;
+}
+/* 4 to blue  */
+.h6 {
+    color: #3d3c4250;
+}
+
+/* .app-navbar > div h1 {
+    color: #EEEEEE;
+} */
+/* .app-navbar-ul > li a {
+    color: #eeeeeed2;
+} */
+
+/* .app-navbar>div>div input{
+    color: #EEEEEE;
+} */
+/* .app-navbar > div > div input::placeholder{
+    color: #eeeeee5f;
+} */
+/* .app-navbar>div>div input::placeholder {
+    color: red;
+} */
+
+/* .app-navbar>div>div button {
+    color: #EEEEEE;
+} */
+
+/* .app-navbar>div>h1 {
+    color: #F6B17A !important;
+}
+
+
+.app-navbar>div>div>input{
+    background-color: #2D3250;
+    border: 0.5px solid #f6b27aac !important;
+    color: #F6B17A;
+}
+.searchbar-centered > button {
+    background-color: #424769;
+}
+.searchbar-centered > button:hover {
+    background-color: #7077A1;
+}
+
+.app-navbar>div>div>input::placeholder {
+    color: #f6b27a79;
+}
+.searchbar-centered>input {
+    height: 100px !important;
+    
+    box-shadow: 2.5px 2.5px 4px #f6b27aac;
+}
+.navbar-fixed{
+    box-shadow: -3px 3px 4px rgba(183, 182, 182, 0);
+}
+
+
+} */

@@ -26,27 +26,88 @@
     --leter-spacing-page-body: 1px;
 }
 
-.app-navbar{
-    /* border: 1px dashed rgb(91, 91, 91); */
+/* # navbar NAVBAR FIXED */
+/* ------------------------------------------- PC VIEW */
+.w-pc-app-navbar{
     display: grid;
     grid-template-columns: 15% 33% 52%;
     width: 98.8vw;
     background-color: #fff;
     transition: 0.8s ease;
-    /* border-bottom: 1px solid rgba(193, 193, 193, 0); */
-    padding-top: 11px;
+    padding-block: 15px;
+    /* padding-top: 11px; */
+}
+.w-pc-app-navbar {
+    /* border: 1px dashed orange; */
+    width: 100%;;
+}
+/* ------------------------------------------- TAB VIEW */
+.w-tab-app-navbar {
+    display: grid;
+    grid-template-columns: 15% 33% 52%;
+    width: 98.8vw;
+    transition: 0.8s ease;
+    padding-block: 20px;
+    /* padding-top: 11px; */
+    /* border: 1px dashed orange; */
+    width: 100%;
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-app-navbar {
+    display: grid;
+    grid-template-columns: 30% 55% 15%;
+    width: 98.8vw;
+    transition: 0.8s ease;
+    padding-block: 20px;
+    /* padding-top: 11px; */
+    /* border: 1px dashed orange; */
+    width: 100%;
 }
 
-/* .app-navbar > div {
-    border: 1px dashed orange;
-} */
-.app-navbar > div {
+/* # navbar NAVBAR FIXED */
+/* ------------------------------------------- ALL VIEW */
+.navbar-fixed {
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* padding-block: 20px; */
+    background-color: #fff;
+    /* border: solid 1px red; */
+    /* border-bottom: 1px solid rgb(222, 220, 220);; */
+    /* box-shadow: -3px 3px 4px rgba(183, 182, 182, 0.554); */
+    /* box-shadow: -3px 3px 3px #6c5f5b34 ; */
+    z-index: 9000;
+}
+
+
+/* # navbar child nth(1) */
+/* ------------------------------------------- PC VIEW */
+.w-pc-app-navbar > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.app-navbar > div > h1 {
+/* ------------------------------------------- TAB VIEW */
+.w-tab-app-navbar>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: rgb(134, 17, 36) 1px solid; */
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-app-navbar>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: rgb(134, 17, 36) 1px solid; */
+}
+
+/* ## navbar child nth(1) 1/3 LOGO */
+/* ------------------------------------------- PC VIEW */
+.w-pc-app-navbar > div > h1 {
     padding-left: 0px;
     font-family: var(--font-navbar-title);
     color: var(--font-color-navbar-title);
@@ -54,7 +115,29 @@
     font-weight: 600;
     cursor: pointer;
 }
-.app-navbar > div > div > input {
+/* ------------------------------------------- TAB VIEW */
+.w-tab-app-navbar>div>h1 {
+    padding-left: 0px;
+    font-family: var(--font-navbar-title);
+    color: var(--font-color-navbar-title);
+    letter-spacing: var(--leter-spacing-navbar-title);
+    font-weight: 600;
+    cursor: pointer;
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-app-navbar>div>h1 {
+    padding-left: 0px;
+    font-family: var(--font-navbar-title);
+    color: var(--font-color-navbar-title);
+    letter-spacing: var(--leter-spacing-navbar-title);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+/* ## navbar child nth(1) 2/3 INPUT BAR */
+/* ------------------------------------------- PC VIEW */
+.w-pc-app-navbar > div > div > input {
     font-size: 18px;
     color: var(--font-color-input-bar);
     height: 40px;
@@ -65,61 +148,108 @@
     padding-inline: 25px;
     /* box-shadow: 2.5px 2.5px 4px rgba(74, 74, 74, 0.306); */
     /* border: 0.7px solid rgba(74, 74, 74, 0.306); */
-
-
     font-family: var(--font-page-body);
     color: var(--font-color-page-body);
     letter-spacing: var(--leter-spacing-page-body);
 }
-.app-navbar>div>div>button{
+.w-pc-app-navbar>div>div>button{
     display: none;
     font-family: var(--font-page-body);
     letter-spacing: var(--leter-spacing-page-body);
 }
-/* .app-navbar > div > ul {
-    border: 1px solid;
-} */
-.app-navbar-ul {
-    padding-right: 0px;
-    display: flex;
-    justify-content: end;
+.navbar-searchbar {
+    transition: all 0.3s ease;
+}
+/* ------------------------------------------- TAB VIEW */
+.w-tab-app-navbar>div>div{
+    /* border: 1px salmon solid; */
+    width: 90%;
+}
+.w-tab-app-navbar>div>div>input {
+    /* position: absolute; */
+    box-sizing: border-box;
+    font-size: 15px;
+    color: var(--font-color-input-bar);
+    height: 40px;
     width: 100%;
+    outline: none;
+    border: 0px;
+    border-radius: 20px;
+    padding-inline: 25px;
+    /* box-shadow: 2.5px 2.5px 4px rgba(74, 74, 74, 0.306); */
+    /* border: 0.7px solid rgba(74, 74, 74, 0.306); */
+    font-family: var(--font-page-body);
+    color: var(--font-color-page-body);
+    letter-spacing: var(--leter-spacing-page-body);
+}
+.w-tab-app-navbar>div>div>button {
+    display: none;
+    font-family: var(--font-page-body);
+    letter-spacing: var(--leter-spacing-page-body);
+}
+.navbar-searchbar {
+    transition: all 0.3s ease;
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-app-navbar>div>div {
+    /* border: 1px salmon solid; */
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.app-navbar-ul > li {
-    list-style: none;
-    margin-inline: 17px;
+.w-mob-app-navbar>div>div>input {
+    /* position: absolute; */
+    box-sizing: border-box;
+    font-size: 10px;
+    color: var(--font-color-input-bar);
+    height: 90%;
+    width: 100%;
+    outline: none;
+    border: 0px;
+    border-radius: 20px;
+    padding-inline: 25px;
+    /* box-shadow: 2.5px 2.5px 4px rgba(74, 74, 74, 0.306); */
+    /* border: 0.7px solid rgba(74, 74, 74, 0.306); */
+    font-family: var(--font-page-body);
+    color: var(--font-color-page-body);
+    letter-spacing: var(--leter-spacing-page-body);
 }
-.app-navbar-ul > li > a {
-    text-decoration: none;
-    font-family: var(--font-navbar-anchors);
-    color: var(--font-color-navbar-anchors);
-    font-size: 1.8vh;
-    letter-spacing: var(--leter-spacing-navbar-anchors);
+
+.w-mob-app-navbar>div>div>button {
+    display: none;
+    font-family: var(--font-page-body);
+    letter-spacing: var(--leter-spacing-page-body);
 }
 
 .navbar-searchbar {
-    transition: all 0.8s ease;
+    transition: all 0.3s ease;
 }
-.searchbar-centered{
+
+
+/* ## navbar child nth(1) 2/3 INPUT BAR CENTERED */
+/* ------------------------------------------- PC VIEW */
+.w-pc-searchbar-centered {
     /* background-color: aqua; */
     position: fixed;
-    /* width: 400px; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -55%);
     z-index: 9999;
-
     display: flex;
     flex-direction: column;
+   
 
 }
-.searchbar-centered > input {
+.w-pc-searchbar-centered>input {
     height: 100px !important;
     /* border: 0.5px solid rgba(160, 159, 159, 0.191); */
     /* box-shadow: 2.5px 2.5px 4px #4a4a4a4e; */
 }
-.searchbar-centered>button {
+.w-pc-searchbar-centered>button {
     display: block !important;
     border: 0px;
     margin-top: 20px;
@@ -136,19 +266,159 @@
     background-color: #92807a;
     color: #fff;
 }
-.searchbar-centered>button:hover{
+.w-pc-searchbar-centered>button:hover {
     background-color: rgba(205, 205, 205, 0.855);
 }
-.navbar-fixed{
-    /* position: absolute; */
+/* ------------------------------------------- TAB VIEW */
+.w-tab-searchbar-centered {
+    /* background-color: aqua; */
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 98.8vw;
-    padding-block: 11px;
-    background-color: #fff;
-    /* border-bottom: 1px solid rgb(222, 220, 220);; */
-    /* box-shadow: -3px 3px 4px rgba(183, 182, 182, 0.554); */
-    /* box-shadow: -3px 3px 3px #6c5f5b34 ; */
-    z-index: 9000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 50vw!important;
+}
+
+.w-tab-searchbar-centered>input {
+    height: 100px !important;
+    
+    /* border: 0.5px solid rgba(160, 159, 159, 0.191); */
+    /* box-shadow: 2.5px 2.5px 4px #4a4a4a4e; */
+}
+
+.w-tab-searchbar-centered>button {
+    display: block !important;
+    border: 0px;
+    margin-top: 20px;
+    padding-inline: 31px;
+    padding-block: 13px;
+    border-radius: 18px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 160px;
+    align-self: end;
+    /* background-color: #A34343; */
+    /* background-color: #6C5F5B; */
+    background-color: #92807a;
+    color: #fff;
+}
+
+.w-tab-searchbar-centered>button:hover {
+    background-color: rgba(205, 205, 205, 0.855);
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-searchbar-centered {
+    /* background-color: aqua; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    width: 75vw !important;
+    height: 28vh !important;
+}
+
+.w-mob-searchbar-centered>input {
+    height: 25% !important;
+    font-size: 16.5px !important;
+
+    /* border: 0.5px solid rgba(160, 159, 159, 0.191); */
+    /* box-shadow: 2.5px 2.5px 4px #4a4a4a4e; */
+}
+
+.w-mob-searchbar-centered>button {
+    display: block !important;
+    border: 0px;
+    margin-top: 17px;
+    padding-inline: 20px !important;
+    padding-block: 15px;
+    border-radius: 18px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    /* width: 130px; */
+    align-self: end;
+    /* background-color: #A34343; */
+    /* background-color: #6C5F5B; */
+    background-color: #92807a;
+    color: #fff;
+}
+
+.w-mob-searchbar-centered>button:hover {
+    background-color: rgba(205, 205, 205, 0.855);
+}
+
+/* ## navbar child nth(1) 3/3 INPUT BAR */
+/* ------------------------------------------- PC VIEW */
+.w-pc-app-navbar-ul {
+    padding-right: 0px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.w-pc-app-navbar-ul > li {
+    list-style: none;
+    margin-inline: 17px;
+}
+.w-pc-app-navbar-ul > li > a {
+    text-decoration: none;
+    font-family: var(--font-navbar-anchors);
+    color: var(--font-color-navbar-anchors);
+    font-size: 1.8vh;
+    letter-spacing: var(--leter-spacing-navbar-anchors);
+}
+/* ------------------------------------------- TAB VIEW */
+.w-tab-app-navbar-ul {
+    padding-right: 0px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.w-tab-app-navbar-ul>li {
+    list-style: none;
+    margin-inline: 17px;
+}
+
+.w-tab-app-navbar-ul>li>a {
+    text-decoration: none;
+    font-family: var(--font-navbar-anchors);
+    color: var(--font-color-navbar-anchors);
+    font-size: 14px;
+    letter-spacing: var(--leter-spacing-navbar-anchors);
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-app-navbar-ul {
+    padding-right: 0px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.w-mob-app-navbar-ul>li {
+    list-style: none;
+    margin-inline: 17px;
+}
+
+.w-mob-app-navbar-ul>li>a {
+    text-decoration: none;
+    font-family: var(--font-navbar-anchors);
+    color: var(--font-color-navbar-anchors);
+    font-size: 14px;
+    letter-spacing: var(--leter-spacing-navbar-anchors);
+}
+.mobile-burger {
+    /* border: 1px solid gray; */
+    padding-inline:10px;
+    padding-block:2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.7);
+    cursor: pointer;
 }

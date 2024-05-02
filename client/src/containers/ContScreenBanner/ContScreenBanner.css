@@ -1,0 +1,61 @@
+/* ------------------------------------------- PC VIEW */
+.w-pc-section-screen-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+    height: 60vh;
+}
+.w-pc-section-screen-banner > h2{
+    font-size: 20vh;
+    letter-spacing: 20px;
+    margin-right: 3vw;
+}
+.w-pc-section-screen-banner>p {
+    font-size: 10vh;
+    letter-spacing: 20px;
+}
+
+/* ------------------------------------------- Tab VIEW */
+.w-tab-section-screen-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+    height: 30vh;
+    margin-bottom: 50px;
+}
+
+.w-tab-section-screen-banner>h2 {
+    font-size: 8vh;
+    letter-spacing: 18px;
+    margin-right: 3vw;
+}
+
+.w-tab-section-screen-banner>p {
+    font-size: 5vh;
+    letter-spacing: 20px;
+}
+/* ------------------------------------------- Tab VIEW */
+.w-mob-section-screen-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid green; */
+    height: 30vh;
+    margin-bottom: 50px;
+}
+
+.w-mob-section-screen-banner>h2 {
+    font-size: 7vh;
+    letter-spacing: 6px;
+    margin-right: 3vw;
+}
+
+.w-mob-section-screen-banner>p {
+    font-size: 3vh;
+    letter-spacing: 6px;
+}

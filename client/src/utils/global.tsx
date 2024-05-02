@@ -101,7 +101,11 @@ for (let name of pallateNames) {
         categoryFontButtonHover: {
             color: pallateHex[name][3],
             backgroundColor: pallateHex[name][1]
-        }
+        },
+        componentBanner: {
+            color: pallateHex[name][0],
+            backgroundColor: pallateHex[name][2]
+        },
     }
 }
 

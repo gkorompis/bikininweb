@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppNavbar } from "../../components";
 import globalStates from "../../utils/global";
 import "./landing-page.css";
-import { ContScreenCategory, ContScreenStory } from "../../containers";
+import { ContScreenBanner, ContScreenCategory, ContScreenStory } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
     const {pallateName, body} = palatteObject || {};
@@ -64,6 +64,7 @@ const LandingPage = () => {
                     <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
 
                     </div>
+                    
 
 
                     {/* page-section 2 */}
@@ -94,7 +95,9 @@ const LandingPage = () => {
                             }
                         </div>
                     </div>
-
+                    <ContScreenBanner styles={{
+                        styleComponentBanner: pallate && pallate.componentBanner
+                    }}/>
                     {/* page-section 3 */}
                     <ContScreenCategory styles={{
                         styleCategoryCardboxItem: pallate && pallate.categoryCardboxItem,

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { AppNavbar } from "../../components";
 import globalStates from "../../utils/global";
-import "./landing-page.css"
+import "./landing-page.css";
+import { ContScreenCategory } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
     const {pallateName, body} = palatteObject || {};
@@ -51,14 +52,15 @@ const LandingPage = () => {
 
 
                     {/* page-section 2 */}
-                    <div className={("page-section color-draping") + (isPageReady ? " section-show" : "")}>
+                    <div className={(" color-draping") + (isPageReady ? " section-show" : "")}>
                         {/* <h1>color draping</h1> */}
                         <div className="conveyor">
                             {
                                 pallateNames.map((name:any )=> {
                                     return (
                                         <>
-                                            <div className="conveyor-item sliding-content" onClick={()=>setPallate(pallateObject[name])}>
+                                            <div>
+                                                <div className="conveyor-item sliding-content" onClick={()=>setPallate(pallateObject[name])}>
                                                 <p style={pallate && pallate.conveyorItemFontP}>{name}</p>
                                                 <div className="hex-layers-wrap" style={pallate && pallate.conveyorItem}>
                                                     <div className="hex-layers layer-1" style={{backgroundColor: pallateHex[name][0]}}></div>
@@ -68,6 +70,9 @@ const LandingPage = () => {
                                                 </div>
                                             
                                             </div>
+
+                                            </div>
+                                            
                                         </>
                                     )
                                 })
@@ -76,19 +81,17 @@ const LandingPage = () => {
                     </div>
 
                     {/* page-section 3 */}
-                    <div className="page-section collection-carousel">
-                        <h1 style={pallate && pallate.sectionTitle}>screen 2</h1>
-                    </div>
+                    <ContScreenCategory/>
 
                     {/* page-section 4 */}
-                     <div className="page-section collection-carousel">
+                     {/* <div className="page-section collection-carousel">
                         <h1 style={pallate && pallate.sectionTitle}>screen 3</h1>
-                    </div>
+                    </div> */}
 
                     {/* page-section 5 */}
-                    <div className="page-section collection-carousel">
+                    {/* <div className="page-section collection-carousel">
                         <h1 style={pallate && pallate.sectionTitle}>screen 4</h1>
-                    </div>
+                    </div> */}
                 </div>
             </>
         )

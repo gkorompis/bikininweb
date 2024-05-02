@@ -1,0 +1,136 @@
+/* screen category */
+/* ------------------------------------------- PC VIEW */
+/* PARENT */
+.w-pc-landing-page-section-screen-category{
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: 40% 60%;
+    /* row-gap: 5%; */
+    /* column-gap: 5%; */
+    /* border: 1px solid rgb(0, 15, 128); */
+    width: 100%;
+    padding-block: 13vh;
+    
+    /* color: #f6f6f6; */
+}
+
+/* CHILDREN NTH(1) 1/2 */
+.w-pc-section-screen-category-title {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 40px;
+}
+
+.w-pc-section-category-title-img {
+    height: 25vw;
+    padding: 0px;
+    /* border: 1px solid; */
+}
+
+.w-pc-section-category-title-h3 {
+    color: #252525;
+    font-size: 8vh;
+    padding: 0px;
+    margin: 0px;
+}
+.w-pc-section-category-title-p{
+    /* height: 15vh; */
+    padding-inline: 0vw;
+    /* border: 1px solid gold; */
+}
+
+/* CHILDREN NTH(1) 2/2 */
+.w-pc-section-screen-category-cardbox{
+    display:flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap !important;
+    padding-block: 20px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    /* background-color: aquamarine; */
+    /* border-left: 19px dashed gray; */
+}
+.w-pc-screen-category-cardbox-item{
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.269);
+    height: 200px;
+    /* width: 300px !important; */
+    min-width: 280px;
+    border-radius: 18px;
+    /* background-color: orange; */
+    margin-inline: 45px;
+}
+
+
+
+/* ------------------------------------------- MOBILE VIEW */
+/* PARENT */
+.w-mob-landing-page-section-screen-category {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    box-sizing: border-box;
+    /* row-gap: 50px; */
+    /* column-gap: 50px; */
+    /* border: 1px solid green; */
+    padding-block: 5vh;
+    width: 100%;
+    /* color: #f6f6f6; */
+}
+
+/* CHILDREN NTH(1) 1/2 */
+.w-mob-section-screen-category-title {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.w-mob-section-category-title-h3 {
+    color: #252525;
+    font-size: 5vh;
+    padding: 0px;
+    margin: 0px;
+}
+.w-mob-section-category-title-p {
+    color: #252525;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    /* border: 1px solid green; */
+    padding-inline: 13vw;
+}
+.w-mob-section-category-title-img {
+    height: 25vh;
+    padding: 0px;
+    /* border: 1px solid; */
+}
+
+
+
+/* CHILDREN NTH(1) 2/2 */
+.w-mob-section-screen-category-cardbox {
+    display: flex;
+    overflow-x: scroll;
+    flex-wrap: nowrap !important;
+    padding-block: 20px;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    align-items: center;
+    /* background-color: aquamarine; */
+    /* border-left: 19px dashed gray; */
+}
+
+.w-mob-screen-category-cardbox-item {
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.269);
+    height: 200px;
+    /* width: 300px !important; */
+    min-width: 250px;
+    border-radius: 18px;
+    /* background-color: orange; */
+    margin-inline: 20px;
+}

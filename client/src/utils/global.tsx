@@ -1,7 +1,8 @@
 import { createContext } from "react";
 
 const pallateHex = {
-    bikinin: ["#EEEEEE","#76ABAE", "#31363F", "#222831",     "", "", "#31363f62", "#31363f62"],
+    // bikinin: ["#EEEEEE","#76ABAE", "#31363F", "#222831",     "", "", "#31363f62", "#31363f62"],
+     bikinin: ["#fff","#76ABAE", "#31363F", "#222831",     "", "", "#31363f62", "#31363f62"],
     aquaDark: ["#222831","#31363F", "#76ABAE", "#EEEEEE",     "", "", "#76abae52", "#76abae52"],
     brownMeat: ["#3E3232","#503C3C", "#7E6363", "#A87C7C",     "", "",  "#a87c7c54", "#a87c7c54"],
     vanillaTaro: ["#352F44","#5C5470", "#B9B4C7", "#FAF0E6",     "", "", "#b9b4c729", "#faf0e653"],

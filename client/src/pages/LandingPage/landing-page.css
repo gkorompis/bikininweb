@@ -2,13 +2,58 @@
     /* border: solid 1px; */
     width: 100vw;
 }
-.page-section{
+/* ------------------------------------------- PC VIEW */
+.w-pc-page-section-filler{
     /* position: relative; */
     /* border: dashed 1px green; */
     width: 100%;
     height: 50vh;
+    transition: 0.4s;
+    /* border: dashed 1px green; */
     /* z-index: -99; */
 }
+.w-pc-page-section-filler-scrolled {
+    /* position: relative; */
+    /* border: dashed 1px green; */
+    width: 100%;
+    height: 20vh;
+    /* z-index: -99; */
+}
+/* ------------------------------------------- TAB VIEW */
+.w-tab-page-section-filler {
+    /* position: relative; */
+    /* border: dashed 1px green; */
+    width: 100%;
+    height: 30vh;
+    transition: 0.4s;
+    /* border: dashed 1px green; */
+    /* z-index: -99; */
+}
+.w-tab-page-section-filler-scrolled {
+    /* position: relative; */
+    /* border: dashed 1px green; */
+    width: 100%;
+    height: 30vh;
+    /* z-index: -99; */
+}
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-page-section-filler {
+    /* position: relative; */
+    /* border: dashed 1px green; */
+    width: 100%;
+    height: 50vh;
+    transition: 0.4s;
+    /* border: dashed 1px green; */
+    /* z-index: -99; */
+}
+.w-mob-page-section-filler-scrolled {
+    /* position: relative; */
+    /* border: dashed 1px green; */
+    width: 100%;
+    height: 20vh;
+    /* z-index: -99; */
+}
+
 
 .color-draping{
     width: 100%;

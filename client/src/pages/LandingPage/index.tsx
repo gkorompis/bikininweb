@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppNavbar } from "../../components";
 import globalStates from "../../utils/global";
 import "./landing-page.css";
@@ -17,15 +17,30 @@ const LandingPage = () => {
         const [isPageReady, setIsPageReady] = useState(false);
         const defaultPallate = (pallateObject && pallateObject["bikinin"]) || {};
         const [pallate, setPallate] = useState(defaultPallate);
+        const [scrolled, setScrolled] = useState(false);;
+
+        const context = globalStates && globalStates.globalContext;
+        const globalContext:any = useContext(context);
+        const windowWidthClass = globalContext && globalContext.windowWidthClass
 
         useEffect(()=>{
+            const handleScroll = () => {
+                const scrolled = window.scrollY > 0;
+                setScrolled(scrolled);  
+            };
+            window.addEventListener('scroll', handleScroll);
             document.body.style.transition = "1s ease-in-out";
             drapeColors(pallate);
             console.log(">>>ue-landing-page", {defaultPallate}, {pallate});
             const timer = setTimeout(()=>{
                 setIsPageReady(true)
                 
-            }, 800)
+            }, 800);
+
+            return ()=>{
+             window.removeEventListener('scroll', handleScroll);
+        }
+             
         }, [pallate])
         return(
             <>
@@ -46,7 +61,7 @@ const LandingPage = () => {
                     />
 
                     {/* page-section 1 */}
-                    <div className="page-section banner">
+                    <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
 
                     </div>
 

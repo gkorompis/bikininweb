@@ -1,0 +1,190 @@
+/* ------------------------------------------- PC VIEW */
+.w-pc-page-section-screen-story{
+    /* border: 1px solid green; */
+    height: 50vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+
+}
+/* nth(1) */
+.w-pc-page-section-screen-story > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    padding: 0px;
+}
+.w-pc-page-section-screen-story>div>h3 {
+    font-size: 45px;
+    /* border: 1px solid green; */
+}
+.w-pc-page-section-screen-story>div>div {
+    display: flex;
+    align-items: center;
+}
+.w-pc-page-section-screen-story>div>div>h2 {
+    font-size: 35px;
+    /* border: 1px solid green; */
+    margin-right: 25px;
+}
+.w-pc-page-section-screen-story>div>div>p {
+    font-size: 30px;
+    /* border: 1px solid green; */
+    padding-inline: 20px;
+    padding-block: 15px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.w-pc-page-section-screen-story>div>div>p:hover {
+    background-color: rgba(126, 125, 125, 0.727);
+}
+/* nth(2) */
+.w-pc-page-section-screen-story>img {
+    height: 40vh;
+    /* border: 1px solid green; */
+    padding: 0px;
+    margin:20px;
+}
+
+/* ------------------------------------------- mobile VIEW */
+.w-tab-page-section-screen-story {
+    /* border: 1px solid green; */
+    height: 40vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* align-items: center; */
+
+}
+
+/* nth(1) */
+.w-tab-page-section-screen-story>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    padding: 0px;
+}
+
+.w-tab-page-section-screen-story>div>h3 {
+    font-size: 35px;
+    /* border: 1px solid green; */
+}
+
+.w-tab-page-section-screen-story>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.w-tab-page-section-screen-story>div>div>h2 {
+    font-size: 25px;
+    /* border: 1px solid green; */
+    margin-right: 25px;
+}
+
+.w-tab-page-section-screen-story>div>div>p {
+    font-size: 28px;
+    /* border: 1px solid green; */
+    padding-inline: 20px;
+    padding-block: 15px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.w-tab-page-section-screen-story>div>div>p:hover {
+    background-color: rgba(126, 125, 125, 0.727);
+}
+
+/* nth(2) */
+.w-tab-page-section-screen-story>img {
+    height: 18vh;
+    /* border: 1px solid green; */
+    padding: 0px;
+    margin: 20px;
+}
+
+
+/* ------------------------------------------- mobile VIEW */
+.w-mob-page-section-screen-story {
+    /* border: 1px solid green; */
+    /* height: 35vh; */
+    padding-bottom: 50px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    align-items: center;
+    
+    /* align-items: center; */
+
+}
+
+/* nth(1) */
+.w-mob-page-section-screen-story>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid green; */
+    padding: 0px;
+}
+.w-mob-page-section-screen-story>div * {
+    margin: 1px
+}
+
+.w-mob-page-section-screen-story>div>h3 {
+    font-size: 18px;
+    /* border: 1px solid green; */
+}
+
+.w-mob-page-section-screen-story>div>div {
+    display: flex;
+    align-items: center;
+}
+
+.w-mob-page-section-screen-story>div>div>h2 {
+    font-size: 15px;
+    /* border: 1px solid green; */
+    margin-right: 6px;
+}
+
+.w-mob-page-section-screen-story>div>div>p {
+    font-size: 15px;
+    /* border: 1px solid green; */
+    padding-inline: 15px;
+    padding-block: 10px;
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.w-mob-page-section-screen-story>div>div>p:hover {
+    background-color: rgba(126, 125, 125, 0.727);
+}
+
+/* nth(2) */
+.w-mob-page-section-screen-story>img {
+    height: 23vh;
+    /* border: 1px solid green; */
+    padding: 0px;
+    margin: 20px;
+}

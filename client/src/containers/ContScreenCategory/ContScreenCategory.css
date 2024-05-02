@@ -32,7 +32,7 @@
 
 .w-pc-section-category-title-h3 {
     color: #252525;
-    font-size: 8vh;
+    font-size: 5vh;
     padding: 0px;
     margin: 0px;
 }
@@ -115,12 +115,9 @@
     overflow-x: scroll;
     flex-wrap: nowrap !important;
     padding-block: 20px;
-    /* border: 1px solid red; */
     box-sizing: border-box;
     align-items: center;
     width: 100%;
-    /* background-color: aquamarine; */
-    /* border-left: 19px dashed gray; */
 }
 
 .w-tab-screen-category-cardbox-item {
@@ -131,6 +128,7 @@
     border-radius: 18px;
     /* background-color: orange; */
     margin-inline: 45px;
+    cursor: pointer;
 }
 
 

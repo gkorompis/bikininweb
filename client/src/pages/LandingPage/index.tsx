@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppNavbar } from "../../components";
 import globalStates from "../../utils/global";
 import "./landing-page.css";
-import { ContScreenCategory } from "../../containers";
+import { ContScreenCategory, ContScreenStory } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
     const {pallateName, body} = palatteObject || {};
@@ -96,7 +96,15 @@ const LandingPage = () => {
                     </div>
 
                     {/* page-section 3 */}
-                    <ContScreenCategory/>
+                    <ContScreenCategory styles={{
+                        styleCategoryCardboxItem: pallate && pallate.categoryCardboxItem,
+                        styleCategoryFontPrimary: pallate && pallate.categoryFontPrimary
+                    }}/>
+                    <ContScreenStory styles={{
+                        styleCategoryFontPrimary: pallate && pallate.categoryFontPrimary,
+                        styleCategoryFontButton: pallate && pallate.categoryFontButton,
+                        styleCategoryFontButtonHover: pallate && pallate.categoryFontButtonHover
+                    }}/>
 
                     {/* page-section 4 */}
                      {/* <div className="page-section collection-carousel">

@@ -25,7 +25,7 @@ const AppNavbar = ({styles}:any) =>{
 
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
-    const windowWidthClass = globalContext && globalContext.windowWidthClass
+    const windowWidthClass = globalContext && globalContext.windowWidthClass;
 
 
     // console.log("app-navbar", {globalContext, windowWidthClass});

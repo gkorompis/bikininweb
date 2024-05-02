@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppNavbar } from "../../components";
 import globalStates from "../../utils/global";
 import "./landing-page.css";
-import { ContScreenBanner, ContScreenCategory, ContScreenStory } from "../../containers";
+import { ContFooter, ContScreenBanner, ContScreenCategory, ContScreenStory } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
     const {pallateName, body} = palatteObject || {};
@@ -60,14 +60,10 @@ const LandingPage = () => {
                         }}
                     />
 
-                    {/* page-section 1 */}
                     <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
 
                     </div>
-                    
 
-
-                    {/* page-section 2 */}
                     <div className={(" color-draping") + (isPageReady ? " section-show" : "")}>
                         {/* <h1>color draping</h1> */}
                         <div className="conveyor">
@@ -95,31 +91,28 @@ const LandingPage = () => {
                             }
                         </div>
                     </div>
+
                     <ContScreenBanner styles={{
                         styleComponentBanner: pallate && pallate.componentBanner,
                         styleBannerBlank: pallate && pallate.bannerBlank,
                         styleBannerBlankMobile: pallate && pallate.bannerBlankMobile
                     }}/>
-                    {/* page-section 3 */}
+
                     <ContScreenCategory styles={{
                         styleCategoryCardboxItem: pallate && pallate.categoryCardboxItem,
                         styleCategoryFontPrimary: pallate && pallate.categoryFontPrimary
                     }}/>
+
                     <ContScreenStory styles={{
                         styleCategoryFontPrimary: pallate && pallate.categoryFontPrimary,
                         styleCategoryFontButton: pallate && pallate.categoryFontButton,
                         styleCategoryFontButtonHover: pallate && pallate.categoryFontButtonHover
                     }}/>
 
-                    {/* page-section 4 */}
-                     {/* <div className="page-section collection-carousel">
-                        <h1 style={pallate && pallate.sectionTitle}>screen 3</h1>
-                    </div> */}
-
-                    {/* page-section 5 */}
-                    {/* <div className="page-section collection-carousel">
-                        <h1 style={pallate && pallate.sectionTitle}>screen 4</h1>
-                    </div> */}
+                    <ContFooter styles={{
+                        styleComponentBanner: pallate && pallate.componentBanner
+                    }}
+                    />
                 </div>
             </>
         )

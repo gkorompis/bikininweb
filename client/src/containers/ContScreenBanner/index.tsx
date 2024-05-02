@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 
 
 const ContScreenBanner = ({styles}:any) =>{
-    const bikininBlank = ["website", "app", "e-invite", "e-commerce"];
+    const bikininBlank = ["website", "webapp", "e-invite", "website"];
 
     const [alternateCountDown, setAlternateCountDown]= useState(3);
     const [dynamicBlank, setDynamicBlank] = useState("website");

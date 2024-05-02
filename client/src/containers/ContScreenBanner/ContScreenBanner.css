@@ -6,16 +6,54 @@
     justify-content: center;
     /* border: 1px solid green; */
     height: 60vh;
+    transition: 1s;
+    z-index: 2;
 }
 .w-pc-section-screen-banner > h2{
-    font-size: 20vh;
+    font-size: 15vh;
     letter-spacing: 20px;
     margin-right: 3vw;
+    transition: 1s;
 }
-.w-pc-section-screen-banner>p {
-    font-size: 10vh;
-    letter-spacing: 20px;
+.w-pc-section-screen-banner>div>p {
+    font-size: 4.5vh;
+    height: 5vh;
+    letter-spacing: 5px;
+    /* transition: 1s; */
+    /* border-bottom: 5px dashed yellow; */
 }
+.w-pc-section-screen-banner>div {
+    /* border-bottom: 5px dashed yellow; */
+    padding-bottom: 20px;
+    width: 30vw;
+    transition: 1s;
+}
+/* .w-pc-blank-{
+    font-size: 0px;
+    height: 0px;
+} */
+
+.w-pc-blank-0 {
+    font-size: 4.5vh;
+    transition: 0.7s;
+    z-index: 0;
+}
+
+.w-pc-blank-1 {
+    font-size: 4.5vh;
+    transition: 0.7s;
+}
+
+.w-pc-blank-2 {
+    font-size: 4.5vh;
+    transition: 0.7s;
+}
+
+.w-pc-blank-3 {
+    font-size: 4.5vh;
+    transition: 0.7s;
+}
+
 
 /* ------------------------------------------- Tab VIEW */
 .w-tab-section-screen-banner {
@@ -29,14 +67,21 @@
 }
 
 .w-tab-section-screen-banner>h2 {
-    font-size: 8vh;
+    font-size: 66px;
     letter-spacing: 18px;
     margin-right: 3vw;
 }
 
-.w-tab-section-screen-banner>p {
-    font-size: 5vh;
-    letter-spacing: 20px;
+.w-tab-section-screen-banner>div>p {
+    font-size: 28px;
+    letter-spacing: 6px;
+    transition: 0.5s;
+}
+.w-tab-section-screen-banner>div {
+    /* border-bottom: 5px dashed yellow; */
+    padding-bottom: 15px;
+    width: 34vw;
+    transition: 1s;
 }
 /* ------------------------------------------- Tab VIEW */
 .w-mob-section-screen-banner {
@@ -50,12 +95,18 @@
 }
 
 .w-mob-section-screen-banner>h2 {
-    font-size: 7vh;
+    font-size: 5vh;
     letter-spacing: 6px;
     margin-right: 3vw;
 }
 
-.w-mob-section-screen-banner>p {
-    font-size: 3vh;
-    letter-spacing: 6px;
+.w-mob-section-screen-banner> div >p {
+    font-size: 19px;
+    letter-spacing: 2px;
+}
+.w-mob-section-screen-banner>div {
+    /* border-bottom: 5px dashed yellow; */
+    padding-bottom: 10px;
+    width: 36vw;
+    transition: 1s;
 }

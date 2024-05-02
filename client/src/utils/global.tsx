@@ -106,6 +106,13 @@ for (let name of pallateNames) {
             color: pallateHex[name][0],
             backgroundColor: pallateHex[name][2]
         },
+        bannerBlank: {
+            borderBottom: `5px dashed ${pallateHex[name][0]}`
+        },
+        bannerBlankMobile: {
+            borderBottom: `2px dashed ${pallateHex[name][0]}`
+        } 
+        // border-bottom: 5px dashed yellow;
     }
 }
 

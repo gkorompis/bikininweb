@@ -96,7 +96,9 @@ const LandingPage = () => {
                         </div>
                     </div>
                     <ContScreenBanner styles={{
-                        styleComponentBanner: pallate && pallate.componentBanner
+                        styleComponentBanner: pallate && pallate.componentBanner,
+                        styleBannerBlank: pallate && pallate.bannerBlank,
+                        styleBannerBlankMobile: pallate && pallate.bannerBlankMobile
                     }}/>
                     {/* page-section 3 */}
                     <ContScreenCategory styles={{

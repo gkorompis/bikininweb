@@ -44,7 +44,7 @@ const AppNavbar = ({styles}:any) =>{
     
 
     useEffect(()=>{
-        console.log(">>>ue-appnavbar", {dynamicStyleAppNavbarInput, windowWidthClass})
+        // console.log(">>>ue-appnavbar", {dynamicStyleAppNavbarInput, windowWidthClass})
         setDynamicStyleAppNavbarInput(styleAppNavbarInputCentered);
         setDynamicStyleAppNavbarFixed(styleAppNavbar);
 

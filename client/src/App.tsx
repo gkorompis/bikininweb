@@ -13,9 +13,9 @@ function App() {
   const [windowWidthClass, setWindowWidthClass] = useState("w-pc");
   const windowSize = useWindowSize() as {width: any, height: any};
   const windowWidth = windowSize && windowSize.width;
-  console.log(">>>root-app", {windowWidth, windowWidthClass})
+  // console.log(">>>root-app", {windowWidth, windowWidthClass})
   useEffect(()=>{
-    console.log(">>>ue-root-app", {windowWidthClass, windowSize, windowWidth}, +windowWidth < 600);
+    // console.log(">>>ue-root-app", {windowWidthClass, windowSize, windowWidth}, +windowWidth < 600);
     if(+windowWidth < 769){
       setWindowWidthClass("w-mob");
     }

@@ -5,7 +5,7 @@ import "./landing-page.css";
 import { ContFooter, ContScreenBanner, ContScreenCategory, ContScreenStory } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
-    const {pallateName, body} = palatteObject || {};
+    const {body} = palatteObject || {};
     document.body.style.backgroundColor = body && body.backgroundColor;
 };  
 
@@ -31,8 +31,8 @@ const LandingPage = () => {
             window.addEventListener('scroll', handleScroll);
             document.body.style.transition = "1s ease-in-out";
             drapeColors(pallate);
-            console.log(">>>ue-landing-page", {defaultPallate}, {pallate});
-            const timer = setTimeout(()=>{
+            // console.log(">>>ue-landing-page", {defaultPallate}, {pallate});
+            setTimeout(()=>{
                 setIsPageReady(true)
                 
             }, 800);
@@ -70,24 +70,25 @@ const LandingPage = () => {
                         {/* <h1>color draping</h1> */}
                         <div className="conveyor">
                             {
-                                pallateNames.map((name:any )=> {
+                                pallateNames.map((name:any, index:any )=> {
+                                    const uniqueName= name + index;
                                     return (
-                                        <>
-                                            <div>
-                                                <div className="conveyor-item sliding-content" onClick={()=>setPallate(pallateObject[name])}>
-                                                <p style={pallate && pallate.conveyorItemFontP}>{name}</p>
-                                                <div className="hex-layers-wrap" style={pallate && pallate.conveyorItem}>
-                                                    <div className="hex-layers layer-1" style={{backgroundColor: pallateHex[name][0]}}></div>
-                                                    <div className="hex-layers layer-2" style={{backgroundColor: pallateHex[name][1]}}></div>
-                                                    <div className="hex-layers layer-3" style={{backgroundColor: pallateHex[name][2]}}></div>
-                                                    <div className="hex-layers layer-4" style={{backgroundColor: pallateHex[name][3]}}></div>
+                                        
+                                            <div key={uniqueName}>
+                                                <div key={uniqueName+"child"} className="conveyor-item sliding-content" onClick={()=>setPallate(pallateObject[name])}>
+                                                <p key={uniqueName+"child-p"} style={pallate && pallate.conveyorItemFontP}>{name}</p>
+                                                <div key={uniqueName+"child-div"} className="hex-layers-wrap" style={pallate && pallate.conveyorItem}>
+                                                    <div key={uniqueName+"child-div-layer1"} className="hex-layers layer-1" style={{backgroundColor: pallateHex[name][0]}}></div>
+                                                    <div key={uniqueName+"child-div-layer2"}  className="hex-layers layer-2" style={{backgroundColor: pallateHex[name][1]}}></div>
+                                                    <div key={uniqueName+"child-div-layer3"}  className="hex-layers layer-3" style={{backgroundColor: pallateHex[name][2]}}></div>
+                                                    <div key={uniqueName+"child-div-layer4"} className="hex-layers layer-4" style={{backgroundColor: pallateHex[name][3]}}></div>
                                                 </div>
                                             
                                             </div>
 
                                             </div>
                                             
-                                        </>
+                                        
                                     )
                                 })
                             }

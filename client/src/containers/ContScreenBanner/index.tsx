@@ -38,7 +38,7 @@ const ContScreenBanner = ({styles}:any) =>{
             }
             
 
-        }, 6000)
+        }, 4000)
         return () => clearInterval(intervalId);
     }, [dynamicBlank])
     return(

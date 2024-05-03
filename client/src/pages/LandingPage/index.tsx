@@ -56,7 +56,9 @@ const LandingPage = () => {
                             styleAppNavbarAnchors: pallate && pallate.appNavbarAnchors,
                             styleAppNavbarInputButton: pallate && pallate.appNavbarInputButton,
                             styleAppNavbarInputButtonHover: pallate && pallate.appNavbarInputButtonHover,
-                            styleAppNavbarBurger: pallate && pallate.appNavbarBurger
+                            styleAppNavbarBurger: pallate && pallate.appNavbarBurger,
+                            styleBurgerCollapsedPspan: pallate && pallate.burgerCollapsedPspan,
+                            styleBurgerCollapsedPspanArrow: pallate && pallate.burgerCollapsedPspanArrow
                         }}
                     />
 

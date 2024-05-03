@@ -14,7 +14,9 @@ const AppNavbar = ({styles}:any) =>{
         styleAppNavbarAnchors,
         styleAppNavbarInputButton,
         styleAppNavbarInputButtonHover,
-        styleAppNavbarBurger
+        styleAppNavbarBurger,
+        styleBurgerCollapsedPspan,
+        styleBurgerCollapsedPspanArrow
 
     } = styles || {};
 
@@ -22,6 +24,7 @@ const AppNavbar = ({styles}:any) =>{
     const [hoverButton, setHoverButton] = useState(false);
     const [dynamicStyleAppNavbarInput, setDynamicStyleAppNavbarInput] = useState(styleAppNavbarInputCentered);
     const [dynamicStyleAppNavbarFixed, setDynamicStyleAppNavbarFixed] = useState(styleAppNavbar);
+    const [isBurgerCollapsed, setIsBurgerCollapsed] = useState(false);
 
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
@@ -34,7 +37,9 @@ const AppNavbar = ({styles}:any) =>{
 
     // put size state in the root !!!!;
 
-    
+    const handleBurgerCollapsed = () =>{
+        setIsBurgerCollapsed(!isBurgerCollapsed);
+    };
 
     
 
@@ -42,6 +47,9 @@ const AppNavbar = ({styles}:any) =>{
         console.log(">>>ue-appnavbar", {dynamicStyleAppNavbarInput, windowWidthClass})
         setDynamicStyleAppNavbarInput(styleAppNavbarInputCentered);
         setDynamicStyleAppNavbarFixed(styleAppNavbar);
+
+        
+
         const handleScroll = () => {
             const scrolled = window.scrollY > 0;
             setScrolled(scrolled);
@@ -66,7 +74,7 @@ const AppNavbar = ({styles}:any) =>{
         return ()=>{
              window.removeEventListener('scroll', handleScroll);
         }
-    }, [styleAppNavbarInputCentered, windowWidthClass, styleAppNavbar, styleAppNavbarFixed])
+    }, [styleAppNavbarInputCentered, windowWidthClass, styleAppNavbar, styleAppNavbarFixed, isBurgerCollapsed])
 
     return(
         <>
@@ -91,8 +99,9 @@ const AppNavbar = ({styles}:any) =>{
                 <div>
                             {
                                 windowWidthClass === "w-mob" ?
-                                <p className="mobile-burger" style={styleAppNavbarBurger}>=</p> :
+                                <p className="mobile-burger" style={styleAppNavbarBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
+                                   
                                     <li><a href="/" style={styleAppNavbarAnchors}>koleksi design</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
@@ -102,6 +111,20 @@ const AppNavbar = ({styles}:any) =>{
                     
                 </div>
             </nav>
+            {windowWidthClass === "w-mob" ?
+            <div>
+                <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
+                    <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
+                         <h3 style={styleAppNavbarAnchors}>bikinin</h3>
+                        <li><a href="/" style={styleAppNavbarAnchors}>koleksi design</a></li>
+                        <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
+                        <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
+                    </ul>
+                    <p style={styleBurgerCollapsedPspan} ><i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i></p>
+                </div> 
+            </div>  : null
+            }
+            
         </>
     )
 };

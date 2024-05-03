@@ -111,7 +111,13 @@ for (let name of pallateNames) {
         },
         bannerBlankMobile: {
             borderBottom: `2px dashed ${pallateHex[name][0]}`
-        } 
+        },
+        burgerCollapsedPspan: {
+            backgroundColor: pallateHex[name][2]
+        },
+        burgerCollapsedPspanArrow: {
+            borderColor: pallateHex[name][1],
+        }
         // border-bottom: 5px dashed yellow;
     }
 }

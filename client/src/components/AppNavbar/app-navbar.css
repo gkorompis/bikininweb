@@ -422,3 +422,108 @@
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.7);
     cursor: pointer;
 }
+
+.burger-collapsed-hide{
+    transform: translateY(-55vh);
+}
+
+.burger-collapsed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100vw;
+    height: 50vh;
+    background-color: #2228315a;
+    transition: 0.5s ease;
+    
+    border-bottom-right-radius: 20px ;
+    border-bottom-left-radius: 20px;
+    /* Adjust blur radius as needed */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.12);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 85% 15%;
+    /* overflow: auto; */
+    /* For Safari */
+}
+
+.w-mob-app-navbar-ul-bruger-collapsed{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 1px solid orange; */
+    height: 80%;
+    margin: 0px;
+    padding: 0;
+}
+.w-mob-app-navbar-ul-bruger-collapsed>h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.w-mob-app-navbar-ul-bruger-collapsed > li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 19px
+}
+.w-mob-app-navbar-ul-bruger-collapsed> li > a{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+.w-mob-app-navbar-ul-bruger-collapsed>li>a:hover {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* mobile collapsed navbar */
+.burger-collapsed>p {
+    /* border: 1px solid pink; */
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;;
+
+    background-color: #31363fe0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.arrow {
+    border: solid;
+    border-width: 3px;
+    height: 16px;
+    width: 16px;
+    border-left: 3px;
+    border-bottom: 3px;
+    padding: 3px;
+    margin-top: 17px;
+    transition: 0.4s;
+}
+.up {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.up:hover {
+    border: dashed;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    border-left: 3px;
+        border-bottom: 3px;
+}

@@ -17,7 +17,6 @@ const AppNavbarOther = ({styles}:any) =>{
         styleAppNavbarOtherInputButtonHover,
         styleAppNavbarOtherBurger,
         styleBurgerCollapsedPspan,
-        styleBurgerCollapsedPspanArrow
 
     } = styles || {};
 
@@ -44,7 +43,7 @@ const AppNavbarOther = ({styles}:any) =>{
     };
     const handleNavigate = (routePath:string)=>{
         navigate(routePath)
-        console.log('route', routePath)
+        // console.log('route', routePath)
     }
 
   
@@ -76,24 +75,24 @@ const AppNavbarOther = ({styles}:any) =>{
             // : (setDynamicStyleAppNavbarOtherInput(styleAppNavbarOtherInputCentered))
         };
 
-        console.log("scrolle in app navbar", scrolled)
+        // console.log("scrolle in app navbar", scrolled)
 
         window.addEventListener('scroll', handleScroll);
 
         return ()=>{
              window.removeEventListener('scroll', handleScroll);
         }
-    }, [styleAppNavbarOtherInputCentered, windowWidthClass, styleAppNavbarOther, styleAppNavbarOtherFixed, isBurgerCollapsed])
+    }, [styleAppNavbarOtherInputCentered, windowWidthClass, styleAppNavbarOther, styleAppNavbarOtherFixed, isBurgerCollapsed, styleAppNavbarOtherInput])
 
     return(
         <>
             <nav className={`${windowWidthClass}-app-navbar ` + (scrolled ? "navbar-fixed" : "")} style={dynamicStyleAppNavbarOtherFixed}>
                 <div>
-                    <h1 style={styleAppNavbarOtherTitle}>bikinin</h1>
+                    <h1 style={styleAppNavbarOtherTitle} onClick={()=>handleNavigate('/')}>bikinin</h1>
                 </div>
                 <div>
                     <div className={scrolled ? "" : `${windowWidthClass}-searchbar-centered-xxx`}>
-                        <input className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarOtherInput}/>
+                        <input  id="navbar-searchbar" name="navbar-searchbar"  className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarOtherInput}/>
                         <style> 
                             {`::placeholder${styleAppNavbarOtherInputPlaceholder}` 
                             } 
@@ -111,9 +110,9 @@ const AppNavbarOther = ({styles}:any) =>{
                                 <p className="mobile-burger" style={styleAppNavbarOtherBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
                                    
-                                    <li><a href="" style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</a></li>
-                                    <li><a href="/" style={styleAppNavbarOtherAnchors}>layanan bikinin</a></li>
-                                    <li><a href="/" style={styleAppNavbarOtherAnchors}>login</a></li>
+                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</p></li>
+                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>layanan bikinin</p></li>
+                                    <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>login</p></li>
                                 </ul>
                                 
                             }
@@ -125,9 +124,9 @@ const AppNavbarOther = ({styles}:any) =>{
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
                          <h3 style={styleAppNavbarOtherAnchors}>bikinin</h3>
-                        <li><a href="/" style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</a></li>
-                        <li><a href="/" style={styleAppNavbarOtherAnchors}>layanan bikinin</a></li>
-                        <li><a href="/" style={styleAppNavbarOtherAnchors}>login</a></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>layanan bikinin</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>login</p></li>
                     </ul>
                     <p style={styleBurgerCollapsedPspan} onClick={handleBurgerCollapsed} >
                         {/* <i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i> */}

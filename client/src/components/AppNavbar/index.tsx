@@ -44,7 +44,7 @@ const AppNavbar = ({styles}:any) =>{
     };
     const handleNavigate = (routePath:string)=>{
         navigate(routePath)
-        console.log('route', routePath)
+        // console.log('route', routePath)
     }
 
   
@@ -76,7 +76,7 @@ const AppNavbar = ({styles}:any) =>{
             // : (setDynamicStyleAppNavbarInput(styleAppNavbarInputCentered))
         };
 
-        console.log("scrolle in app navbar", scrolled)
+        // console.log("scrolle in app navbar", scrolled)
 
         window.addEventListener('scroll', handleScroll);
 
@@ -93,7 +93,7 @@ const AppNavbar = ({styles}:any) =>{
                 </div>
                 <div>
                     <div className={scrolled ? "" : `${windowWidthClass}-searchbar-centered`}>
-                        <input className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarInput}/>
+                        <input id="navbar-searchbar" name="navbar-searchbar" className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarInput}/>
                         <style> 
                             {`::placeholder${styleAppNavbarInputPlaceholder}` 
                             } 
@@ -111,7 +111,7 @@ const AppNavbar = ({styles}:any) =>{
                                 <p className="mobile-burger" style={styleAppNavbarBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
                                    
-                                    <li><a href="" style={styleAppNavbarAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</a></li>
+                                    <li><a  style={styleAppNavbarAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
                                 </ul>
@@ -125,7 +125,7 @@ const AppNavbar = ({styles}:any) =>{
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
                          <h3 style={styleAppNavbarAnchors}>bikinin</h3>
-                        <li><a href="/" style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</a></li>
+                        <li><a style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</a></li>
                         <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                         <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
                     </ul>

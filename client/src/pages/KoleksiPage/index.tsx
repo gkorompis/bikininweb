@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { AppNavbarOther } from "../../components";
 import globalStates from "../../utils/global";
 import "./KoleksiPage.css";
-import { ContFooter, ContKoleksiDesignGrid } from "../../containers";
+import { ContFooter, ContKoleksiBanner, ContKoleksiDesignGrid } from "../../containers";
 import { IconBlog, IconEducation, IconFood, IconTravel, IconWear } from "../../assets/img";
 
 const drapeColors = (palatteObject:any) =>{
@@ -78,7 +78,7 @@ const KoleksiPage = () =>{
                             styleBurgerCollapsedPspanArrow: pallate && pallate.burgerCollapsedPspanArrow
                         }}
                     />
-
+                    <ContKoleksiBanner/>
                     <ContKoleksiDesignGrid
                         data={{collectionDesign}}
                         styles={{}}

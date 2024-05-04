@@ -9,16 +9,16 @@ const ContKoleksiDesignGrid = ({data,styles}:any)  => {
     const windowWidthClass = globalContext && globalContext.windowWidthClass;
 
     return (
-        <div className={"" + `${windowWidthClass}-section-koleksi-design-grid`}>
+        <div className={`${windowWidthClass}-section-koleksi-design-grid`}>
             <div className="wrapper">
                 {
                     collectionDesign.map((item:any, index:any)=>{
                         const {name, imgSrc} = item;
                         return(
-                            <div className="wrapper-item">
+                            <div key={index + name} className="wrapper-item">
                                 <section className="design-card">
                                     
-                                    <img src={imgSrc}/>
+                                    <img src={imgSrc} alt={name} />
                                     <h4>{name}</h4>
                                 </section>
                             </div>

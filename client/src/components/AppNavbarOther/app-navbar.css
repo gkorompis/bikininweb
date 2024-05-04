@@ -368,12 +368,13 @@
     list-style: none;
     margin-inline: 17px;
 }
-.w-pc-app-navbar-ul > li > a {
+.w-pc-app-navbar-ul > li > p {
     text-decoration: none;
     font-family: var(--font-navbar-anchors);
     color: var(--font-color-navbar-anchors);
     font-size: 1.8vh;
     letter-spacing: var(--leter-spacing-navbar-anchors);
+    cursor: pointer;
 }
 /* ------------------------------------------- TAB VIEW */
 .w-tab-app-navbar-ul {
@@ -388,7 +389,7 @@
     margin-inline: 17px;
 }
 
-.w-tab-app-navbar-ul>li>a {
+.w-tab-app-navbar-ul>li>p {
     text-decoration: none;
     font-family: var(--font-navbar-anchors);
     color: var(--font-color-navbar-anchors);
@@ -408,7 +409,7 @@
     margin-inline: 17px;
 }
 
-.w-mob-app-navbar-ul>li>a {
+.w-mob-app-navbar-ul>li>p {
     text-decoration: none;
     font-family: var(--font-navbar-anchors);
     color: var(--font-color-navbar-anchors);
@@ -475,12 +476,13 @@
     padding: 0px;
     margin-top: 20px
 }
-.w-mob-app-navbar-ul-bruger-collapsed> li > a{
+.w-mob-app-navbar-ul-bruger-collapsed> li > p{
     text-decoration: none;
     margin: 0px;
     padding: 0px;
+    
 }
-.w-mob-app-navbar-ul-bruger-collapsed>li>a:hover {
+.w-mob-app-navbar-ul-bruger-collapsed>li>p:hover {
     text-decoration: none;
     margin: 0px;
     padding: 0px;

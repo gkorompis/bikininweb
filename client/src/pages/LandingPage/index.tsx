@@ -23,7 +23,7 @@ const LandingPage = () => {
         const globalContext:any = useContext(context);
         const windowWidthClass = globalContext && globalContext.windowWidthClass
 
-        console.log("scrolled outside", scrolled)
+        // console.log("scrolled outside", scrolled)
         useEffect(()=>{
             const handleScroll = () => {
                 const scrolled = window.scrollY > 0;

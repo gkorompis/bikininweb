@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { LandingPage } from './pages';
+import { KoleksiPage, LandingPage } from './pages';
 import globalStates from './utils/global'
 import { useEffect, useState } from 'react';
 import { useWindowSize } from '@uidotdev/usehooks';
@@ -15,7 +15,7 @@ function App() {
   const windowWidth = windowSize && windowSize.width;
   // console.log(">>>root-app", {windowWidth, windowWidthClass})
   useEffect(()=>{
-    // console.log(">>>ue-root-app", {windowWidthClass, windowSize, windowWidth}, +windowWidth < 600);
+    console.log(">>>ue-root-app", {windowWidthClass, windowSize, windowWidth}, +windowWidth < 600);
     if(+windowWidth < 769){
       setWindowWidthClass("w-mob");
     }
@@ -36,6 +36,7 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<LandingPage/>}></Route>
+              <Route path="/koleksi-design" element={<KoleksiPage/>}></Route>
             </Routes>
         </BrowserRouter>
       </globalContext.Provider>

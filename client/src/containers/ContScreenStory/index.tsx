@@ -25,7 +25,7 @@ const ContScreenStory = ({styles}:any) =>{
                         > request di sini </p>
                     </div>
                 </div>
-                <img src={ImgFast}/>
+                <img src={ImgFast} alt ={"clock inside red fire"}/>
         </section>
     </>)
 };

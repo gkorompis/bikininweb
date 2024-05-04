@@ -23,6 +23,7 @@ const LandingPage = () => {
         const globalContext:any = useContext(context);
         const windowWidthClass = globalContext && globalContext.windowWidthClass
 
+        console.log("scrolled outside", scrolled)
         useEffect(()=>{
             const handleScroll = () => {
                 const scrolled = window.scrollY > 0;
@@ -62,9 +63,16 @@ const LandingPage = () => {
                         }}
                     />
 
-                    <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
+                    {/* <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
 
+                    </div> */}
+                     <div className={(`${windowWidthClass}-page-section-filler  ${scrolled ? `${windowWidthClass}-opacity-show` : `${windowWidthClass}-opacity-hide`}`) }>
+                         
+                                    <h1 style={(pallate && pallate.appNavbarTitle)}>it's YOUR STORY to WORLDWIDE</h1> 
+                                 
                     </div>
+                    
+                    
 
                     <div className={(" color-draping") + (isPageReady ? " section-show" : "")}>
                         {/* <h1>color draping</h1> */}

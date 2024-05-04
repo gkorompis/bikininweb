@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./app-navbar.css";
 import globalStates from "../../utils/global";
+import { useNavigate } from "react-router-dom";
 
 const AppNavbar = ({styles}:any) =>{
 
@@ -20,6 +21,7 @@ const AppNavbar = ({styles}:any) =>{
 
     } = styles || {};
 
+    const navigate = useNavigate();
     const [scrolled, setScrolled] = useState(false);
     const [hoverButton, setHoverButton] = useState(false);
     const [dynamicStyleAppNavbarInput, setDynamicStyleAppNavbarInput] = useState(styleAppNavbarInputCentered);
@@ -40,8 +42,12 @@ const AppNavbar = ({styles}:any) =>{
     const handleBurgerCollapsed = () =>{
         setIsBurgerCollapsed(!isBurgerCollapsed);
     };
+    const handleNavigate = (routePath:string)=>{
+        navigate(routePath)
+        console.log('route', routePath)
+    }
 
-    
+  
 
     useEffect(()=>{
         // console.log(">>>ue-appnavbar", {dynamicStyleAppNavbarInput, windowWidthClass})
@@ -52,6 +58,7 @@ const AppNavbar = ({styles}:any) =>{
 
         const handleScroll = () => {
             const scrolled = window.scrollY > 0;
+            
             setScrolled(scrolled);
             // console.log("isScrolled",scrolled)
             if(scrolled){
@@ -68,6 +75,8 @@ const AppNavbar = ({styles}:any) =>{
             // (setDynamicStyleAppNavbarInput(styleAppNavbarInput)) 
             // : (setDynamicStyleAppNavbarInput(styleAppNavbarInputCentered))
         };
+
+        console.log("scrolle in app navbar", scrolled)
 
         window.addEventListener('scroll', handleScroll);
 
@@ -93,7 +102,7 @@ const AppNavbar = ({styles}:any) =>{
                             className="" style={hoverButton ? styleAppNavbarInputButtonHover : styleAppNavbarInputButton} 
                             onMouseOver={(e)=>{e.preventDefault(); setHoverButton(true)}}
                             onMouseLeave={(e)=>{e.preventDefault(); setHoverButton(false)}}
-                        >cari design</button>
+                        >bikinin</button>
                     </div>
                 </div>{}
                 <div>
@@ -102,7 +111,7 @@ const AppNavbar = ({styles}:any) =>{
                                 <p className="mobile-burger" style={styleAppNavbarBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
                                    
-                                    <li><a href="/" style={styleAppNavbarAnchors}>koleksi design</a></li>
+                                    <li><a href="/" style={styleAppNavbarAnchors} onClick={()=>null}>koleksi design</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
                                 </ul>
@@ -116,11 +125,14 @@ const AppNavbar = ({styles}:any) =>{
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
                          <h3 style={styleAppNavbarAnchors}>bikinin</h3>
-                        <li><a href="/" style={styleAppNavbarAnchors}>koleksi design</a></li>
+                        <li><a href="/" style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</a></li>
                         <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                         <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
                     </ul>
-                    <p style={styleBurgerCollapsedPspan} ><i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i></p>
+                    <p style={styleBurgerCollapsedPspan} onClick={handleBurgerCollapsed} >
+                        {/* <i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i> */}
+                        close
+                    </p>
                 </div> 
             </div>  : null
             }

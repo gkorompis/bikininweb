@@ -29,11 +29,11 @@
 /* # navbar NAVBAR FIXED */
 /* ------------------------------------------- PC VIEW */
 .w-pc-app-navbar{
+    transition: 1.3s ease;
     display: grid;
     grid-template-columns: 15% 33% 52%;
     width: 98.8vw;
     background-color: #fff;
-    transition: 0.8s ease;
     padding-block: 15px;
     /* padding-top: 11px; */
 }
@@ -46,7 +46,7 @@
     display: grid;
     grid-template-columns: 15% 33% 52%;
     width: 98.8vw;
-    transition: 0.8s ease;
+    transition: 1.3s ease;
     padding-block: 20px;
     /* padding-top: 11px; */
     /* border: 1px dashed orange; */
@@ -57,7 +57,7 @@
     display: grid;
     grid-template-columns: 30% 55% 15%;
     width: 98.8vw;
-    transition: 0.8s ease;
+    transition: 1.3s ease;
     padding-block: 20px;
     /* padding-top: 11px; */
     /* border: 1px dashed orange; */
@@ -68,6 +68,7 @@
 /* ------------------------------------------- ALL VIEW */
 .navbar-fixed {
     /* position: absolute; */
+    transition: 1.3s ease;
     position: fixed;
     top: 0;
     left: 0;
@@ -158,7 +159,7 @@
     letter-spacing: var(--leter-spacing-page-body);
 }
 .navbar-searchbar {
-    transition: all 0.3s ease;
+    transition: all 2s ease;
 }
 /* ------------------------------------------- TAB VIEW */
 .w-tab-app-navbar>div>div{
@@ -188,7 +189,7 @@
     letter-spacing: var(--leter-spacing-page-body);
 }
 .navbar-searchbar {
-    transition: all 0.3s ease;
+    transition: all 2s ease;
 }
 /* ------------------------------------------- MOBILE VIEW */
 .w-mob-app-navbar>div>div {
@@ -226,7 +227,7 @@
 }
 
 .navbar-searchbar {
-    transition: all 0.3s ease;
+    transition: all 2s ease;
 }
 
 
@@ -258,7 +259,7 @@
     border-radius: 18px;
     font-size: 15px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 1.3s ease;
     width: 160px;
     align-self: end;
     /* background-color: #A34343; */
@@ -273,7 +274,7 @@
 .w-tab-searchbar-centered {
     /* background-color: aqua; */
     position: fixed;
-    top: 28%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -55%);
     z-index: 9999;
@@ -298,7 +299,7 @@
     border-radius: 18px;
     font-size: 15px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 1.3s ease;
     width: 160px;
     align-self: end;
     /* background-color: #A34343; */
@@ -341,7 +342,7 @@
     border-radius: 18px;
     font-size: 12px;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: 1.3s ease;
     /* width: 130px; */
     align-self: end;
     /* background-color: #A34343; */
@@ -424,7 +425,7 @@
 }
 
 .burger-collapsed-hide{
-    transform: translateY(-55vh);
+    transform: translateY(-95vh);
 }
 
 .burger-collapsed {
@@ -433,21 +434,21 @@
     left: 0;
     z-index: 9999;
     width: 100vw;
-    height: 50vh;
-    background-color: #2228315a;
-    transition: 0.5s ease;
+    height: 90vh;
+    background-color: #d2d4d85a;
+    transition: 1.3s ease;
     
     border-bottom-right-radius: 20px ;
     border-bottom-left-radius: 20px;
     /* Adjust blur radius as needed */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
     box-sizing: border-box;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.12);
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 85% 15%;
+    grid-template-rows: 93% 7%;
     /* overflow: auto; */
     /* For Safari */
 }
@@ -466,12 +467,13 @@
     margin-top: 40px;
     margin-bottom: 10px;
     font-size: 30px;
+    letter-spacing: 3px;
 }
 .w-mob-app-navbar-ul-bruger-collapsed > li {
     list-style: none;
     margin: 0px;
     padding: 0px;
-    margin-top: 19px
+    margin-top: 20px
 }
 .w-mob-app-navbar-ul-bruger-collapsed> li > a{
     text-decoration: none;

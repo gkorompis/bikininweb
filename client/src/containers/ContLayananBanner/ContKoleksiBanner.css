@@ -1,0 +1,148 @@
+/* ------------------------------------------- PC VIEW */
+.wrap-text-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+}
+.wrap-text-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+}
+.w-pc-cont-koleksi-banner{
+    height: 40vh;
+    width: 100vw;
+    /* background-color: #76ABAE ; */
+    /* color: #fff; */
+    color: #31363F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.w-pc-cont-koleksi-banner > h2 {
+    letter-spacing: 10px;
+    font-size: 10vh;
+    margin: 0;
+}
+.w-pc-cont-koleksi-banner>div {
+    margin-top: 3vh;
+}
+
+.w-pc-cont-koleksi-banner> div > h1 {
+    letter-spacing: 5px;
+    font-size: 5.5vh;
+    margin: 0;
+}
+.w-pc-cont-koleksi-banner> div > p {
+    margin: 0;
+    letter-spacing: 0vh;
+    font-size: 3vh;
+    margin-right: 13px;
+}
+
+
+/* ------------------------------------------- TAB VIEW */
+.wrap-text-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+}
+
+.w-tab-cont-koleksi-banner {
+    /* height: 35vh; */
+    margin-top: 10vh;
+    margin-bottom:3vh;
+    width: 100vw;
+    /* background-color: #76ABAE ; */
+    /* color: #fff; */
+    color: #31363F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-tab-cont-koleksi-banner>h2 {
+    letter-spacing: 7.5px;
+    font-size: 5.8vh;
+    margin: 0;
+}
+.w-tab-cont-koleksi-banner>div {
+    margin-top: 1vh;
+}
+.w-tab-cont-koleksi-banner>div>h1 {
+    letter-spacing: 5px;
+    font-size: 3.3vh;
+    margin: 0;
+}
+
+.w-tab-cont-koleksi-banner>div>p {
+    margin: 0;
+    letter-spacing: 0vh;
+    font-size: 1.7vh;
+    margin-right: 10px;
+}
+
+
+/* ------------------------------------------- MOBILE VIEW */
+.wrap-text-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+}
+
+.w-mob-cont-koleksi-banner {
+    /* height: 35vh; */
+    margin-top: 8vh;
+    margin-bottom: 3vh;
+    width: 100vw;
+    /* background-color: #76ABAE ; */
+    /* color: #fff; */
+    color: #31363F;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-mob-cont-koleksi-banner>h2 {
+    letter-spacing: 6px;
+    font-size: 5vh;
+    margin: 0;
+    text-align: center;
+    padding-inline: 5vw;
+}
+
+.w-mob-cont-koleksi-banner>div {
+    margin-top: 3vh;
+}
+.w-mob-cont-koleksi-banner>div>p {
+    margin: 0;
+    letter-spacing: 1px;
+    font-size: 1.7vh;
+    text-align: center;
+    margin-right: 5px;
+    padding-inline: 5vw;
+}
+.w-mob-cont-koleksi-banner>div>h1 {
+    letter-spacing: 5px;
+    font-size: 2vh;
+    margin: 0;
+    margin-top: 7px;
+}

@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { KoleksiPage, LandingPage } from './pages';
+import { KoleksiPage, LandingPage, LayananPage } from './pages';
 import globalStates from './utils/global'
 import { useEffect, useState } from 'react';
 import { useWindowSize } from '@uidotdev/usehooks';
@@ -36,7 +36,8 @@ function App() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<LandingPage/>}></Route>
-              <Route path="/koleksi-design" element={<KoleksiPage/>}></Route>
+              <Route path="/referensi-design" element={<KoleksiPage/>}></Route>
+              <Route path="/layanan" element={<LayananPage/>}></Route>
             </Routes>
         </BrowserRouter>
       </globalContext.Provider>

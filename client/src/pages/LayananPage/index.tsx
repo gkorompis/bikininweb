@@ -1,46 +1,23 @@
-import { useEffect, useState } from "react";
-import { AppNavbarOther } from "../../components";
+import { useContext, useEffect, useState } from "react";
 import globalStates from "../../utils/global";
-import "./KoleksiPage.css";
-import { ContFooter, ContKoleksiBanner, ContKoleksiDesignGrid } from "../../containers";
-import { IconBlog, IconEducation, IconFood, IconTravel, IconWear } from "../../assets/img";
+import "./LayananPage.css";
+import { AppNavbarOther } from "../../components";
+import { ContFooter, ContLayananBanner, ContLayananGrid } from "../../containers";
 
 const drapeColors = (palatteObject:any) =>{
     const {body} = palatteObject || {};
     document.body.style.backgroundColor = body && body.backgroundColor;
 };  
 
-
-const KoleksiPage = () =>{
+const LayananPage = () =>{
     const pallateObject = globalStates && globalStates.globalPallateObject as any;
     const defaultPallate = (pallateObject && pallateObject["bikinin"]) || {};
     const [pallate, setPallate] = useState(defaultPallate);
     const [scrolled, setScrolled] = useState(false);;
 
-    const collectionDesign = [
-        {
-            name: "Goods",
-            imgSrc: IconWear
-        },
-        {
-            name: "Food and Beverage",
-            imgSrc: IconFood
-        },
-        {
-            name: "Blog and Company Profiles",
-            imgSrc: IconBlog
-        },
-        {
-            name: "Education and Training",
-            imgSrc: IconEducation
-        },
-        {
-            name: "Tourisms and Travelling",
-            imgSrc: IconTravel
-        }
-
-
-    ]
+    const context = globalStates && globalStates.globalContext;
+    const globalContext:any = useContext(context);
+    const windowWidthClass = globalContext && globalContext.windowWidthClass
 
     useEffect(()=>{
             const handleScroll = () => {
@@ -57,9 +34,9 @@ const KoleksiPage = () =>{
              
         }, [pallate])
 
-    return(
+    return (
         <>
-            <div className="koleksi-page">
+            <div className={`${windowWidthClass}-cont-layanan-page`}>
                 <AppNavbarOther
                         styles ={{
                             styleAppNavbarOther: pallate && pallate.appNavbar,
@@ -76,18 +53,14 @@ const KoleksiPage = () =>{
                             styleBurgerCollapsedPspanArrow: pallate && pallate.burgerCollapsedPspanArrow
                         }}
                     />
-                    <ContKoleksiBanner/>
-                    <ContKoleksiDesignGrid
-                        data={{collectionDesign}}
-                        styles={{}}
-                    />
-                    <ContFooter styles={{
-                        styleComponentBanner: pallate && pallate.componentBanner
-                    }}/>
-                    
+                <ContLayananBanner/>
+                <ContLayananGrid/>
+                <ContFooter styles={{
+                    styleComponentBanner: pallate && pallate.componentBanner
+                }}/>
             </div>
         </>
     )
 };
 
-export default KoleksiPage;
+export default LayananPage;

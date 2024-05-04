@@ -110,9 +110,9 @@ const AppNavbarOther = ({styles}:any) =>{
                                 <p className="mobile-burger" style={styleAppNavbarOtherBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
                                    
-                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</p></li>
-                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>layanan bikinin</p></li>
-                                    <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>login</p></li>
+                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/referensi-design')}>referensi design</p></li>
+                                    <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/layanan')}>layanan bikinin</p></li>
+                                    <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>request meeting</p></li>
                                 </ul>
                                 
                             }
@@ -124,9 +124,9 @@ const AppNavbarOther = ({styles}:any) =>{
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
                          <h3 style={styleAppNavbarOtherAnchors}>bikinin</h3>
-                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/koleksi-design")}>koleksi design</p></li>
-                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>layanan bikinin</p></li>
-                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>login</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/referensi-design")}>referensi design</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/layanan')}>layanan bikinin</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>request meeting</p></li>
                     </ul>
                     <p style={styleBurgerCollapsedPspan} onClick={handleBurgerCollapsed} >
                         {/* <i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i> */}

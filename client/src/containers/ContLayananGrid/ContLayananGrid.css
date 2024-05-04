@@ -1,0 +1,264 @@
+/* ------------------------------------------- PC VIEW */
+.w-pc-cont-layanan-grid{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    box-sizing: border-box;
+    padding-inline: 10vw;
+    column-gap: 5vw;
+    margin-bottom: 10svw;
+
+}
+.w-pc-cont-layanan-grid > .wrapper-item {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(53, 53, 53, 0.389);
+
+}
+.w-pc-cont-layanan-grid>.wrapper-item > h3, h4, p {
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>h3:hover{
+    cursor: pointer;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>h4{
+    margin-block: 10px;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>h4:hover {
+    cursor: pointer;
+}
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>p:hover {
+    cursor: pointer;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>h3{
+    font-size: 30px;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>.paket-fitur{
+    margin-top: 20px;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>.paket-fitur > * {
+    font-size: small;
+    margin-top: 5px;
+    text-align: start;
+}
+
+.w-pc-cont-layanan-grid>.wrapper-item> .booking{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-inline: 40px;
+    padding-block: 20px;
+    margin-block:30px;
+    border-radius: 30px;
+    justify-self: end;
+    background-color: #76ABAE;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.3s ease;
+}
+.w-pc-cont-layanan-grid>.wrapper-item>.booking:hover{
+    background-color: #222831;
+    color: #76ABAE;
+}
+
+/* ------------------------------------------- TAB VIEW */
+.w-tab-cont-layanan-grid {
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    box-sizing: border-box;
+    padding-inline: 5vw;
+    column-gap: 5vw;
+    row-gap: 5vw;
+    margin-bottom: 10svw;
+
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(53, 53, 53, 0.389);
+
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>h3:hover {
+    cursor: pointer;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>h4 {
+    margin-block: 10px;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>h4:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>p:hover {
+    cursor: pointer;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>h3 {
+    font-size: 30px;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>.paket-fitur {
+    margin-top: 20px;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>.paket-fitur>* {
+    font-size: small;
+    margin-top: 5px;
+    text-align: start;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>.booking {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-inline: 40px;
+    padding-block: 20px;
+    margin-block: 30px;
+    border-radius: 30px;
+    justify-self: end;
+    background-color: #76ABAE;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.w-tab-cont-layanan-grid>.wrapper-item>.booking:hover {
+    background-color: #222831;
+    color: #76ABAE;
+}
+
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-cont-layanan-grid {
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    box-sizing: border-box;
+    padding-inline: 5vw;
+    column-gap: 5vw;
+    row-gap: 5vw;
+    margin-bottom: 10svw;
+
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(53, 53, 53, 0.389);
+
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>h3:hover {
+    cursor: pointer;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>h4 {
+    margin-block: 10px;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>h4:hover {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>p:hover {
+    cursor: pointer;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>h3 {
+    font-size: 30px;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>.paket-fitur {
+    margin-top: 20px;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>.paket-fitur>* {
+    font-size: small;
+    margin-top: 5px;
+    text-align: start;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>.booking {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    padding-inline: 40px;
+    padding-block: 20px;
+    margin-block: 30px;
+    border-radius: 30px;
+    justify-self: end;
+    background-color: #76ABAE;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.w-mob-cont-layanan-grid>.wrapper-item>.booking:hover {
+    background-color: #222831;
+    color: #76ABAE;
+}

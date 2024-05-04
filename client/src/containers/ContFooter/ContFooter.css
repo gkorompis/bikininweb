@@ -67,7 +67,7 @@
 /* 2/2  grid*/
 .w-tab-container-footer>div {
     font-size: 32px;
-    border: 1px dashed orange;
+    /* border: 1px dashed orange; */
     height: 100%;
     width: 100%;
     padding-bottom: 50px;

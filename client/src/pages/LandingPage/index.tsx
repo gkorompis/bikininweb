@@ -66,7 +66,7 @@ const LandingPage = () => {
                     {/* <div className={(scrolled ? `${windowWidthClass}-page-section-filler-scrolled` : `${windowWidthClass}-page-section-filler`)}>
 
                     </div> */}
-                     <div className={(`${windowWidthClass}-page-section-filler  ${scrolled ? `${windowWidthClass}-opacity-show` : `${windowWidthClass}-opacity-hide`}`) }>
+                     <div className={`${windowWidthClass}-page-section-filler   ${scrolled ? `${windowWidthClass}-opacity-show` : `${windowWidthClass}-opacity-hide`}` }>
                          
                                     <h1 style={(pallate && pallate.appNavbarTitle)}>it's YOUR STORY to WORLDWIDE</h1> 
                                  

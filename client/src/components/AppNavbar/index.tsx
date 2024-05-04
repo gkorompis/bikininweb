@@ -111,7 +111,7 @@ const AppNavbar = ({styles}:any) =>{
                                 <p className="mobile-burger" style={styleAppNavbarBurger} onClick={handleBurgerCollapsed}>=</p> :
                                 <ul className={`${windowWidthClass}-app-navbar-ul`}>
                                    
-                                    <li><a href="/" style={styleAppNavbarAnchors} onClick={()=>null}>koleksi design</a></li>
+                                    <li><a href="" style={styleAppNavbarAnchors} onClick={()=>handleNavigate('/koleksi-design')}>koleksi design</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>layanan bikinin</a></li>
                                     <li><a href="/" style={styleAppNavbarAnchors}>login</a></li>
                                 </ul>

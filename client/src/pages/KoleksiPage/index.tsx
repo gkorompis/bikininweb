@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import { AppNavbar } from "../../components";
+import { AppNavbarOther } from "../../components";
 import globalStates from "../../utils/global";
 import "./KoleksiPage.css";
+import { ContFooter, ContKoleksiDesignGrid } from "../../containers";
+import { IconBlog, IconEducation, IconFood, IconTravel, IconWear } from "../../assets/img";
 
 const drapeColors = (palatteObject:any) =>{
     const {body} = palatteObject || {};
@@ -16,6 +18,31 @@ const KoleksiPage = () =>{
     const defaultPallate = (pallateObject && pallateObject["bikinin"]) || {};
     const [pallate, setPallate] = useState(defaultPallate);
     const [scrolled, setScrolled] = useState(false);;
+
+    const collectionDesign = [
+        {
+            name: "Goods",
+            imgSrc: IconWear
+        },
+        {
+            name: "Food and Beverage",
+            imgSrc: IconFood
+        },
+        {
+            name: "Blog and Company Profiles",
+            imgSrc: IconBlog
+        },
+        {
+            name: "Education and Training",
+            imgSrc: IconEducation
+        },
+        {
+            name: "Tourisms and Travelling",
+            imgSrc: IconTravel
+        }
+
+
+    ]
 
     useEffect(()=>{
             const handleScroll = () => {
@@ -35,24 +62,31 @@ const KoleksiPage = () =>{
     return(
         <>
             <div className="koleksi-page">
-                <AppNavbar
+                <AppNavbarOther
                         styles ={{
-                            styleAppNavbar: pallate && pallate.appNavbar,
-                            styleAppNavbarFixed: pallate && pallate.appNavbarFixed,
-                            styleAppNavbarInput: pallate && pallate.appNavbarInput,
-                            styleAppNavbarInputCentered: pallate && pallate.appNavbarInputCentered,
-                            styleAppNavbarInputPlaceholder: pallate && pallate.appNavbarInputPlaceholder,
-                            styleAppNavbarTitle: pallate && pallate.appNavbarTitle,
-                            styleAppNavbarAnchors: pallate && pallate.appNavbarAnchors,
-                            styleAppNavbarInputButton: pallate && pallate.appNavbarInputButton,
-                            styleAppNavbarInputButtonHover: pallate && pallate.appNavbarInputButtonHover,
-                            styleAppNavbarBurger: pallate && pallate.appNavbarBurger,
+                            styleAppNavbarOther: pallate && pallate.appNavbar,
+                            styleAppNavbarOtherFixed: pallate && pallate.appNavbarFixed,
+                            styleAppNavbarOtherInput: pallate && pallate.appNavbarInput,
+                            styleAppNavbarOtherInputCentered: pallate && pallate.appNavbarInputCentered,
+                            styleAppNavbarOtherInputPlaceholder: pallate && pallate.appNavbarInputPlaceholder,
+                            styleAppNavbarOtherTitle: pallate && pallate.appNavbarTitle,
+                            styleAppNavbarOtherAnchors: pallate && pallate.appNavbarAnchors,
+                            styleAppNavbarOtherInputButton: pallate && pallate.appNavbarInputButton,
+                            styleAppNavbarOtherInputButtonHover: pallate && pallate.appNavbarInputButtonHover,
+                            styleAppNavbarOtherBurger: pallate && pallate.appNavbarBurger,
                             styleBurgerCollapsedPspan: pallate && pallate.burgerCollapsedPspan,
                             styleBurgerCollapsedPspanArrow: pallate && pallate.burgerCollapsedPspanArrow
                         }}
                     />
 
-                    <h1>Koleksi Page</h1>
+                    <ContKoleksiDesignGrid
+                        data={{collectionDesign}}
+                        styles={{}}
+                    />
+                    <ContFooter styles={{
+                        styleComponentBanner: pallate && pallate.componentBanner
+                    }}/>
+                    
             </div>
         </>
     )

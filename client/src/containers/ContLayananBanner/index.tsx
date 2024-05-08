@@ -13,8 +13,8 @@ const ContLayananBanner = () =>{
             <div className={"" + `${windowWidthClass}-cont-koleksi-banner`}>
                 <h2>paket layanan</h2>
                 <div className={"" + (windowWidthClass === "w-mob" ? "wrap-text-col" : "wrap-text-row")}>
-                    <p>rincian paket fitur dan harga layanan bikinin web desain</p>
-                    {/* <h1>bikinin</h1> */}
+                    <p>rincian paket fitur dan harga layanan bikinin</p>
+                    <h1>website</h1>
                 </div>
                 
             </div>

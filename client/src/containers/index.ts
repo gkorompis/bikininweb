@@ -8,3 +8,5 @@ export { default as ContKoleksiBanner} from './ContKoleksiBanner'
 
 export { default as ContLayananBanner } from './ContLayananBanner'
 export { default as ContLayananGrid } from './ContLayananGrid'
+
+export { default as UniversalNavbarBlur } from './UniversalNavbarBlur'

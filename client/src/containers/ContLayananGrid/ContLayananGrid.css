@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     box-sizing: border-box;
     padding-inline: 10vw;
-    column-gap: 5vw;
+    column-gap: 1vw;
     margin-bottom: 10svw;
 
 }
@@ -51,7 +51,7 @@ p {
 }
 .w-pc-cont-layanan-grid>.wrapper-item>.paket-fitur > * {
     font-size: small;
-    margin-top: 5px;
+    margin-top: 10px;
     text-align: start;
 }
 

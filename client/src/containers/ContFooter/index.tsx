@@ -1,16 +1,22 @@
 import "./ContFooter.css"
 import globalStates from "../../utils/global";
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ContFooterCss = ({styles}:any) =>{
+    const navigate = useNavigate()
     const styleComponentBanner = (styles && styles.styleComponentBanner) || {};
 
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
     const windowWidthClass = globalContext && globalContext.windowWidthClass;
+
+   const handleFooter = () =>{
+        navigate('/referensi-design');
+   }
     return (
         <>
-            <div className={`${windowWidthClass}-container-footer`} style={styleComponentBanner}>
+            <div className={`${windowWidthClass}-container-footer`} style={styleComponentBanner} onClick={handleFooter}>
                 <h3>bikinin</h3>
                 <div>
                     <div>

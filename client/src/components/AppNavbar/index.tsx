@@ -3,7 +3,13 @@ import "./app-navbar.css";
 import globalStates from "../../utils/global";
 import { useNavigate } from "react-router-dom";
 
+const openLinkHandler = (link:any) =>{
+    window.open(link, '_blank');
+}
+
+
 const AppNavbar = ({styles}:any) =>{
+      
 
     const {
         styleAppNavbar, 
@@ -26,6 +32,7 @@ const AppNavbar = ({styles}:any) =>{
     const [dynamicStyleAppNavbarInput, setDynamicStyleAppNavbarInput] = useState(styleAppNavbarInputCentered);
     const [dynamicStyleAppNavbarFixed, setDynamicStyleAppNavbarFixed] = useState(styleAppNavbar);
     const [isBurgerCollapsed, setIsBurgerCollapsed] = useState(false);
+    const [searchbarValue, setSearchbarValue] = useState("");
 
     const context = globalStates && globalStates.globalContext;
     const globalContext:any = useContext(context);
@@ -45,6 +52,33 @@ const AppNavbar = ({styles}:any) =>{
         navigate(routePath)
         // console.log('route', routePath)
     }
+    const handleInputChange = (e:any)=>{
+        try{
+            setSearchbarValue(e.target.value);
+        } catch (err){
+            
+        }
+    }
+    const handleButtonBikinin = () =>{
+        const inputMessage = searchbarValue as string;
+        const waFormat = inputMessage.replace(/ /g, "%20");
+        const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20minta%20tolong%20dibikinin%20website%20tentang%20${waFormat}.%20Mohon%20bantuan%20informasinya.%20Terima%20kasih.%20`
+        openLinkHandler(waMessage);
+    }
+    const handleButtonRequestMeeting = () =>{
+        const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20request%20meeting%20online%20untuk%20diskusi%20terkait%20bikinin%20website.%20Mohon%20bantuannya.%20Terima%20kasih.%20`
+        openLinkHandler(waMessage);
+    } 
+    const handleKeyPress = (e:any) => {
+        if (e.key === 'Enter') {
+            // Call a function or submit a form here
+            const inputMessage = e.target.value;
+            const waFormat = inputMessage.replace(/ /g, "%20");
+            const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20minta%20tolong%20dibikinin%20website%20tentang%20${waFormat}.%20Mohon%20bantuan%20informasinya.%20Terima%20kasih.%20`
+            openLinkHandler(waMessage);
+        }
+    };
+
 
   
 
@@ -92,7 +126,16 @@ const AppNavbar = ({styles}:any) =>{
                 </div>
                 <div>
                     <div className={scrolled ? "" : `${windowWidthClass}-searchbar-centered`}>
-                        <input id="navbar-searchbar" name="navbar-searchbar" className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarInput}/>
+                        <input 
+                            id="navbar-searchbar" 
+                            name="navbar-searchbar" 
+                            className={`navbar-searchbar `} 
+                            placeholder="mau bikin website tentang apa?" 
+                            style={dynamicStyleAppNavbarInput}
+                            value={searchbarValue}
+                            onChange={handleInputChange}
+                            onKeyDown={handleKeyPress}
+                            />
                         <style> 
                             {`::placeholder${styleAppNavbarInputPlaceholder}` 
                             } 
@@ -101,6 +144,7 @@ const AppNavbar = ({styles}:any) =>{
                             className="" style={hoverButton ? styleAppNavbarInputButtonHover : styleAppNavbarInputButton} 
                             onMouseOver={(e)=>{e.preventDefault(); setHoverButton(true)}}
                             onMouseLeave={(e)=>{e.preventDefault(); setHoverButton(false)}}
+                            onClick={handleButtonBikinin}
                         >bikinin</button>
                     </div>
                 </div>{}
@@ -112,7 +156,7 @@ const AppNavbar = ({styles}:any) =>{
                                    
                                     <li><a  style={styleAppNavbarAnchors} onClick={()=>handleNavigate('/referensi-design')}>referensi design</a></li>
                                     <li><a  style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/layanan")}>layanan bikinin</a></li>
-                                    <li><a href="/" style={styleAppNavbarAnchors}>request meeting</a></li>
+                                    <li><a  style={styleAppNavbarAnchors} onClick={handleButtonRequestMeeting}>request meeting</a></li>
                                 </ul>
                                 
                             }
@@ -126,7 +170,7 @@ const AppNavbar = ({styles}:any) =>{
                          <h3 style={styleAppNavbarAnchors}>bikinin</h3>
                         <li><a style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/referensi-design")}>referensi design</a></li>
                         <li><a style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/layanan")}>layanan bikinin</a></li>
-                        <li><a href="/" style={styleAppNavbarAnchors}>request meeting</a></li>
+                        <li><a style={styleAppNavbarAnchors} onClick={handleButtonRequestMeeting}>request meeting</a></li>
                     </ul>
                     <p style={styleBurgerCollapsedPspan} onClick={handleBurgerCollapsed} >
                         {/* <i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i> */}

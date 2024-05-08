@@ -3,6 +3,10 @@ import "./app-navbar.css";
 import globalStates from "../../utils/global";
 import { useNavigate } from "react-router-dom";
 
+
+const openLinkHandler = (link:any) =>{
+    window.open(link, '_blank');
+}
 const AppNavbarOther = ({styles}:any) =>{
 
     const {
@@ -45,6 +49,19 @@ const AppNavbarOther = ({styles}:any) =>{
         navigate(routePath)
         // console.log('route', routePath)
     }
+    const handleButtonRequestMeeting = () =>{
+        const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20request%20meeting%20online%20untuk%20diskusi%20terkait%20bikinin%20website.%20Mohon%20bantuannya.%20Terima%20kasih.%20`
+        openLinkHandler(waMessage);
+    } 
+    const handleKeyPress = (e:any) => {
+        if (e.key === 'Enter') {
+            // Call a function or submit a form here
+            const inputMessage = e.target.value;
+            const waFormat = inputMessage.replace(/ /g, "%20");
+            const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20minta%20tolong%20dibikinin%20website%20tentang%20${waFormat}.%20Mohon%20bantuan%20informasinya.%20Terima%20kasih.%20`
+            openLinkHandler(waMessage);
+        }
+    };
 
   
 
@@ -92,7 +109,9 @@ const AppNavbarOther = ({styles}:any) =>{
                 </div>
                 <div>
                     <div className={scrolled ? "" : `${windowWidthClass}-searchbar-centered-xxx`}>
-                        <input  id="navbar-searchbar" name="navbar-searchbar"  className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarOtherInput}/>
+                        <input  id="navbar-searchbar" name="navbar-searchbar"  className={`navbar-searchbar `} placeholder="mau bikin website apa?" style={dynamicStyleAppNavbarOtherInput}
+                            onKeyDown={handleKeyPress}
+                        />
                         <style> 
                             {`::placeholder${styleAppNavbarOtherInputPlaceholder}` 
                             } 
@@ -112,7 +131,7 @@ const AppNavbarOther = ({styles}:any) =>{
                                    
                                     <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/referensi-design')}>referensi design</p></li>
                                     <li><p  style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/layanan')}>layanan bikinin</p></li>
-                                    <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>request meeting</p></li>
+                                    <li><p style={styleAppNavbarOtherAnchors} onClick={handleButtonRequestMeeting}>request meeting</p></li>
                                 </ul>
                                 
                             }
@@ -126,7 +145,7 @@ const AppNavbarOther = ({styles}:any) =>{
                          <h3 style={styleAppNavbarOtherAnchors}>bikinin</h3>
                         <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/referensi-design")}>referensi design</p></li>
                         <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/layanan')}>layanan bikinin</p></li>
-                        <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/')}>request meeting</p></li>
+                        <li><p style={styleAppNavbarOtherAnchors} onClick={handleButtonRequestMeeting}>request meeting</p></li>
                     </ul>
                     <p style={styleBurgerCollapsedPspan} onClick={handleBurgerCollapsed} >
                         {/* <i className="arrow up" style={styleBurgerCollapsedPspanArrow} onClick={handleBurgerCollapsed}></i> */}

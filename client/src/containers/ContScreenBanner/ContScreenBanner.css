@@ -19,6 +19,7 @@
     font-size: 4.5vh;
     height: 5vh;
     letter-spacing: 5px;
+    cursor: pointer;
     /* transition: 1s; */
     /* border-bottom: 5px dashed yellow; */
 }
@@ -27,6 +28,8 @@
     padding-bottom: 20px;
     width: 30vw;
     transition: 1s;
+
+    display: flex;
 }
 /* .w-pc-blank-{
     font-size: 0px;

@@ -13,6 +13,16 @@ const ContScreenStory = ({styles}:any) =>{
     const windowWidthClass = globalContext && globalContext.windowWidthClass
 
     const [hoverButton, setHoverButton] = useState(false);
+
+    const openLinkHandler = (link:any) =>{
+        window.open(link, '_blank');
+    }
+
+    const handleButtonRequestWebsite = () =>{
+        const waMessage = `https://wa.me/6287715376976?text=Halo,%20saya%20mau%20minta%20tolong%20dibikinin%20website.%20Mohon%20bantuan%20informasinya.%20Terima%20kasih.%20`
+        openLinkHandler(waMessage);
+    } 
+    
     return(<>
         <section className={`${windowWidthClass}-page-section-screen-story`}>
                 <div>
@@ -22,6 +32,7 @@ const ContScreenStory = ({styles}:any) =>{
                         <p style={hoverButton ? styleCategoryFontButtonHover : styleCategoryFontButton}
                             onMouseOver={(e)=>{e.preventDefault(); setHoverButton(true)}}
                             onMouseLeave={(e)=>{e.preventDefault(); setHoverButton(false)}}
+                            onClick={handleButtonRequestWebsite}
                         > request di sini </p>
                     </div>
                 </div>

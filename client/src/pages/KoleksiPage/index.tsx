@@ -19,27 +19,30 @@ const KoleksiPage = () =>{
 
     const collectionDesign = [
         {
-            name: "Goods",
-            imgSrc: IconWear
+            name: "Goods and Wears",
+            imgSrc: IconWear,
+            route: "/referensi-design/goods-and-wears"
         },
         {
-            name: "Food and Beverage",
-            imgSrc: IconFood
+            name: "Foods and Beverages",
+            imgSrc: IconFood,
+            route: "/referensi-design/foods-and-beverages"
         },
         {
             name: "Blog and Company Profiles",
-            imgSrc: IconBlog
+            imgSrc: IconBlog,
+            route: "/referensi-design/blog-and-company-profiles"
         },
         {
             name: "Education and Training",
-            imgSrc: IconEducation
+            imgSrc: IconEducation,
+            route: "/referensi-design/education-and-training"
         },
         {
             name: "Tourisms and Travelling",
-            imgSrc: IconTravel
+            imgSrc: IconTravel,
+            route: "/referensi-design/tourisms-and-travelling"
         }
-
-
     ]
 
     useEffect(()=>{

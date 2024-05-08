@@ -1,0 +1,278 @@
+/* ------------------------------------------- PC VIEW */
+.w-pc-goods-wears-page{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.w-pc-goods-wears-page-banner {
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid rgb(0, 83, 128); */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.w-pc-goods-wears-page-banner > .banner-section-img {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.w-pc-goods-wears-page-banner>.banner-section-img > img {
+    height: 160%;
+}
+
+.w-pc-goods-wears-page-banner>.banner-section-content{
+    /* background-color: rgba(0, 4, 255, 0.545); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.w-pc-goods-wears-page-banner>.banner-section-content > .content-wrapper {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+.w-pc-goods-wears-page-banner>.banner-section-content>.content-wrapper > h1, h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.9s;
+}
+.w-pc-goods-wears-page-banner>.banner-section-content>.content-wrapper>h3 {
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.w-pc-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2 {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+.w-pc-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>p,
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+.w-pc-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>h3 {
+    font-size: 80px;
+}
+
+
+
+
+
+/* ------------------------------------------- TAB VIEW */
+.w-tab-goods-wears-page {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.w-tab-goods-wears-page-banner {
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid rgb(0, 83, 128); */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-img {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-img>img {
+    height: 180%;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content {
+    /* background-color: rgba(0, 4, 255, 0.545); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper>h1,h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper>h1 {
+    font-size: 30px;
+    text-align: center;
+}
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper>h3 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2 {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>p,
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>h3 {
+    font-size: 80px;
+}
+.w-tab-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>p {
+    font-size: 20px;
+    text-align: start;
+}
+
+
+/* ------------------------------------------- MOBILE VIEW */
+.w-mob-goods-wears-page {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.w-mob-goods-wears-page-banner {
+    height: 100vh;
+    width: 100vw;
+    /* border: 1px solid rgb(0, 83, 128); */
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.w-mob-goods-wears-page-banner>.banner-section-img {
+    /* background-color: red; */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.w-mob-goods-wears-page-banner>.banner-section-img>img {
+    height: 150%;
+}
+
+.w-mob-goods-wears-page-banner>.banner-section-content {
+    /* background-color: rgba(0, 4, 255, 0.545); */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.w-mob-goods-wears-page-banner>.banner-section-content>.content-wrapper {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+.w-mob-goods-wears-page-banner>.banner-section-content>.content-wrapper>h1,
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.w-mob-goods-wears-page-banner>div>div>h3 {
+    font-size: 40px;
+
+}
+
+
+.w-mob-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2 {
+    /* border: 1px solid orange; */
+    background-color: rgba(0, 0, 0, 0.126);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    transition: 0.5s;
+}
+
+.w-mob-goods-wears-page-banner>.banner-section-content>.content-wrapper-screen2>p,
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.w-mob-goods-wears-page-banner>div>div>h3 {
+    font-size: 40px;
+}
+.w-mob-goods-wears-page-banner>div>div>p {
+    text-align: start;
+}
+
+
+.bg-less {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.child-text>h1 {
+    font-size: 40px;
+
+}
+.child-text>h3 {
+    font-size: 40px !important;
+}

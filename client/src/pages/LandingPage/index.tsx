@@ -37,12 +37,15 @@ const LandingPage = () => {
                 setIsPageReady(true)
                 
             }, 800);
+            window.scrollTo(0, 0);
+
 
             return ()=>{
              window.removeEventListener('scroll', handleScroll);
         }
              
         }, [pallate])
+
         return(
             <>
                 <div className="app-pages page-landing">

@@ -2,26 +2,27 @@ import {ImgDesignIcon4 } from "../../assets/img";
 import "./ContScreenCategory.css";
 import globalStates from "../../utils/global";
 import { useContext } from "react";
+import { CardPreview1, CardPreview2 } from "../../assets/photos";
 
 const ContScreenCategory = ({styles}:any) =>{
     const styleCategoryCardboxItem = (styles && styles.styleCategoryCardboxItem) || {};
      const styleCategoryFontPrimary = (styles && styles.styleCategoryFontPrimary) || {};
     const previewList = [
         {
-            desainName: "sportswear",
-            imgSrc: ""
+            desainName: "goods and wears",
+            imgSrc: CardPreview1
         },
         {
-            desainName: "pastries",
-            imgSrc: ""
+            desainName: "food and beverages",
+            imgSrc: CardPreview2
         },
         {
             desainName: "music lesson",
-            imgSrc: ""
+            imgSrc: CardPreview1
         }, 
         {
             desainName: "music lesson",
-            imgSrc: ""
+            imgSrc: CardPreview2
         }
     ]
 
@@ -42,10 +43,12 @@ const ContScreenCategory = ({styles}:any) =>{
                 <div className={`${windowWidthClass}-section-screen-category ${windowWidthClass}-section-screen-category-cardbox`}>
                     {
                         previewList && previewList.map((preview: any, index: any)=>{
+                            const {imgSrc, desainName} = preview;
                             return(
                                 
                                     <div key={index} className={`${windowWidthClass}-screen-category-cardbox-item`} style={styleCategoryCardboxItem}>
-
+                                        <img src={imgSrc}/>
+                                        <p>{desainName}</p>
                                     </div>
                             )
                         })

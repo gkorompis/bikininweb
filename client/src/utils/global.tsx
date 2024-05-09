@@ -90,6 +90,8 @@ for (let name of pallateNames) {
         },
         categoryCardboxItem: {
             boxShadow: `2px 2px 3px ${pallateHex[name][6]}`,
+            backgroundColor: pallateHex[name][2],
+            color: pallateHex[name][0],
         },
         categoryFontPrimary: {
             color: pallateHex[name][3]

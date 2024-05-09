@@ -14,3 +14,7 @@ export { default as ImgItemFab4 } from './fab-choco-4.jpg'
 export { default as ImgItemFab5 } from './fab-choco-5.jpg'
 export { default as ImgItemFab6 } from './fab-choco-6.jpg'
 export { default as ImgItemFab7 } from './fab-choco-7.jpg'
+
+
+export { default as CardPreview1 } from './card-preview-1.png'
+export { default as CardPreview2 } from './card-preview-2.png'

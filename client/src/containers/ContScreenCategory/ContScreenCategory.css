@@ -63,6 +63,11 @@
     border-radius: 18px;
     /* background-color: orange; */
     margin-inline: 45px;
+    overflow: hidden;
+}
+.w-pc-screen-category-cardbox-item>img{
+    /* width: 100%; */
+    width: 100%;
 }
 
 /* ------------------------------------------- TAB VIEW */

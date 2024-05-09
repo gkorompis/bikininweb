@@ -1,14 +1,25 @@
-import { FABGrid, UniversalNavbarBlur } from "../../containers";
+import { FABGrid, UniversalFooter, UniversalNavbarBlur, UniversalNavbars } from "../../containers";
 import GAWFooter from "../../containers/GAWFooter";
 import "./FABPage.css";
 
 const FABPage = () =>{
+    
     return(
         <>
             <div className={`w-pc-fab-page`}>
-                <UniversalNavbarBlur/>
+                {/* <UniversalNavbarBlur/> */}
+                <UniversalNavbars
+                    data={{
+                        title: "pâtisseries"
+                    }}
+                />
                 <FABGrid/>
-                <GAWFooter/>
+                {/* <GAWFooter/> */}
+                <UniversalFooter
+                    data={{
+                        title: "pâtisseries"
+                    }} 
+                />
             </div>
         </>
     )

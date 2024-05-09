@@ -10,3 +10,4 @@ export { default as ContLayananBanner } from './ContLayananBanner'
 export { default as ContLayananGrid } from './ContLayananGrid'
 
 export { default as UniversalNavbarBlur } from './UniversalNavbarBlur'
+export { default as FABGrid } from './FABGrid'

@@ -1,0 +1,40 @@
+.w-pc-fab-grid{
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    grid-auto-rows: 330px;
+    row-gap: 5vh;
+    column-gap: 1vw;
+    
+}
+.w-pc-fab-grid>.fab-grid-item{
+    /* border: 1px solid rgb(36, 198, 139); */
+    /* background-color: aquamarine; */
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.188);
+
+}
+.w-pc-fab-grid>.fab-grid-item>.fab-card-img{
+    width: auto;
+    height: 70%;
+    overflow: hidden;
+    /* border: 1px solid rgb(13, 0, 255); */
+    border-radius: 20px;
+}
+.w-pc-fab-grid>.fab-grid-item>.fab-card-img>img{
+    width: 100%;
+    height: auto;
+    
+}
+.w-pc-fab-grid>.fab-grid-item>.fab-card-desc{
+    height: 30%;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+    padding-block: 10px;
+}
+

@@ -11,4 +11,6 @@ export { default as IconWear } from './wear-2.png';
 export { default as IconTravel } from './travel-2.png';
 export { default as IconEducation } from './education-2.png';
 export { default as IconBlog }  from './blog-2.png';
-export { default as IconFood } from './food-2.png'
+export { default as IconFood } from './food-2.png';
+
+export { default as IconBack } from './back.png'

@@ -12,6 +12,7 @@
     opacity: 0%;
     transition: 0.5s;
     opacity: 0%;
+    
     /* Gradient from transparent to white */
     /* filter: blur(5px); */
 }
@@ -45,6 +46,7 @@
     margin: 0;
     margin-right: 50px;
     color: #fff;
+    cursor: pointer;
 }
 .w-pc-universal-navbar-blur > .bar-3 > p {
     padding: 0;
@@ -54,13 +56,20 @@
     /* color: black; */
     outline-color: black !important;
     outline-width: 20px !important;
+    cursor: pointer !important;
 }
 
 
 .app-navbar-fixed{
     position: fixed;
     z-index: 9000;
+    cursor: pointer !important;
     opacity: 100%;
+    
+}
+.app-navbar-fixed:hover{
+    cursor: pointer;
+    border: 1px dashed pink;
 }
 .opacity-show {
     opacity: 100%;

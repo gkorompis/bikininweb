@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { GoodsWearsPage, KoleksiPage, LandingPage, LayananPage } from './pages';
+import { FABPage, GoodsWearsPage, KoleksiPage, LandingPage, LayananPage } from './pages';
 import globalStates from './utils/global'
 import { useEffect, useState } from 'react';
 import { useWindowSize } from '@uidotdev/usehooks';
@@ -28,7 +28,9 @@ function App() {
       setWindowWidthClass("w-pc");
     }
 
-  }, [windowSize, windowWidth])
+  }, [windowSize, windowWidth]);
+
+ 
   
   return (
     <>
@@ -38,6 +40,7 @@ function App() {
               <Route path="/" element={<LandingPage/>}></Route>
               <Route path="/referensi-design" element={<KoleksiPage/>}></Route>
               <Route path="/referensi-design/goods-and-wears" element={<GoodsWearsPage/>}></Route>
+               <Route path="/referensi-design/foods-and-beverages" element={<FABPage/>}></Route>
               <Route path="/layanan" element={<LayananPage/>}></Route>
             </Routes>
         </BrowserRouter>

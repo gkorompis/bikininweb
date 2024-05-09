@@ -49,7 +49,8 @@ const AppNavbar = ({styles}:any) =>{
         setIsBurgerCollapsed(!isBurgerCollapsed);
     };
     const handleNavigate = (routePath:string)=>{
-        navigate(routePath)
+        navigate(routePath);
+        window.scrollTo(0,0);
         // console.log('route', routePath)
     }
     const handleInputChange = (e:any)=>{
@@ -78,6 +79,7 @@ const AppNavbar = ({styles}:any) =>{
             openLinkHandler(waMessage);
         }
     };
+
 
 
   
@@ -116,7 +118,7 @@ const AppNavbar = ({styles}:any) =>{
         return ()=>{
              window.removeEventListener('scroll', handleScroll);
         }
-    }, [styleAppNavbarInputCentered, windowWidthClass, styleAppNavbar, styleAppNavbarFixed, isBurgerCollapsed])
+    }, [styleAppNavbarInputCentered, windowWidthClass, styleAppNavbar, styleAppNavbarFixed, isBurgerCollapsed, styleAppNavbarInput])
 
     return(
         <>

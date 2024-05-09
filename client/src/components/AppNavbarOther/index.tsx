@@ -46,7 +46,8 @@ const AppNavbarOther = ({styles}:any) =>{
         setIsBurgerCollapsed(!isBurgerCollapsed);
     };
     const handleNavigate = (routePath:string)=>{
-        navigate(routePath)
+        navigate(routePath);
+        window.scrollTo(0,0);
         // console.log('route', routePath)
     }
     const handleButtonRequestMeeting = () =>{

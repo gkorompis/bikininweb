@@ -1,9 +1,10 @@
 
 import { useContext, useEffect, useState } from "react";
-import { ImgBannerGaw, ImgBannerGaw3, ImgBannerGaw4, ImgBannerGaw6, MImgBannerGaw3 } from "../../assets/photos";
-import { ContFooter, UniversalNavbarBlur } from "../../containers";
+import { ImgBannerGaw3, ImgBannerGaw6, MImgBannerGaw3 } from "../../assets/photos";
+import { UniversalNavbarBlur } from "../../containers";
 import "./GoodsWearsPage.css";
 import globalStates from "../../utils/global";
+import GAWFooter from "../../containers/GAWFooter";
 
 const GoodsWearsPage = () =>{
     const [scrolled, setScrolled] = useState(false);
@@ -30,11 +31,11 @@ const GoodsWearsPage = () =>{
                 
                 <div className="banner-section-img">
                     {/* <img src={ImgBannerGaw3}/> */}
-                    <img src={(windowWidthClass==="w-pc" || windowWidthClass==="w-tab") ? ImgBannerGaw3 : MImgBannerGaw3}/>
+                    <img src={(windowWidthClass==="w-pc" || windowWidthClass==="w-tab") ? ImgBannerGaw3 : MImgBannerGaw3} alt="fashion clothes"/>
                 </div>
                 <UniversalNavbarBlur/>
                 <div className={"banner-section-content"}>
-                    <div className={"content-wrapper" + ` ${scrolled ? "bg-less": " "}` + `  ${scrolled ? "child-text": ""}`}>
+                    <div className={("content-wrapper" + ` ${scrolled ? "bg-less": " "}` + `  ${scrolled ? "child-text": ""}`)}>
                          <h1>
                             Allison Wears
                         </h1>
@@ -46,7 +47,7 @@ const GoodsWearsPage = () =>{
             </section>
             <section className={`${windowWidthClass}-goods-wears-page-banner`}>
                 <div className="banner-section-img">
-                    <img src={ImgBannerGaw6}/>
+                    <img src={ImgBannerGaw6}  alt="fashion jeans"/>
                 </div>
                 <div className="banner-section-content">
                     <div className={"content-wrapper-screen2" + ` ${scrolled ? "bg-less": " "}`}>
@@ -60,6 +61,7 @@ const GoodsWearsPage = () =>{
                     </div>
                 </div>
             </section>
+            <GAWFooter/>
         </div>
     )
 };

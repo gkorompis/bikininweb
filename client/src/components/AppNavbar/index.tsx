@@ -169,7 +169,7 @@ const AppNavbar = ({styles}:any) =>{
             <div>
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
-                         <h3 style={styleAppNavbarAnchors}>bikinin</h3>
+                         <h3 style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/")}>bikinin</h3>
                         <li><a style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/referensi-design")}>referensi design</a></li>
                         <li><a style={styleAppNavbarAnchors} onClick={()=>handleNavigate("/layanan")}>layanan bikinin</a></li>
                         <li><a style={styleAppNavbarAnchors} onClick={handleButtonRequestMeeting}>request meeting</a></li>

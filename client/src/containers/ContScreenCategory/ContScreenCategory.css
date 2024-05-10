@@ -134,6 +134,12 @@
     /* background-color: orange; */
     margin-inline: 45px;
     cursor: pointer;
+    overflow: hidden;
+}
+.w-tab-screen-category-cardbox-item>img {
+    /* width: 100%; */
+    height: auto;
+    width: 100%;
 }
 
 
@@ -204,4 +210,9 @@
     border-radius: 18px;
     /* background-color: orange; */
     margin-inline: 20px;
+    overflow: hidden;
+}
+.w-mob-screen-category-cardbox-item>img{
+    height: auto;
+    width: 100%;
 }

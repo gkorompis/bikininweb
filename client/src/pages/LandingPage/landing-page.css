@@ -107,8 +107,7 @@
     /* z-index: -99; */
 }
 
-
-.color-draping{
+.w-pc-color-draping {
     width: 100%;
     display: flex;
     /* height: 30vh; */
@@ -122,9 +121,81 @@
     opacity: 0%;
     transition: 0.9s ease;
     /* border: 1px solid goldenrod; */
+    margin-top: 50 px;
+    margin-bottom: 50px;
 }
-.color-draping > h1 {
+
+.w-pc-color-draping>h2 {
+    padding: 0px;
+    margin: 0px;
     align-self: start;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    margin-bottom: 0px;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.w-tab-color-draping {
+    width: 100%;
+    display: flex;
+    /* height: 30vh; */
+    flex-direction: column;
+    align-items: start;
+    padding-block: 7vh;
+    padding-inline: 2vw;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    margin-right: 100px;
+    opacity: 0%;
+    transition: 0.9s ease;
+    /* border: 1px solid goldenrod; */
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.w-tab-color-draping>h2 {
+    padding: 0px;
+    margin: 0px;
+    align-self: start;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+
+.w-mob-color-draping{
+    width: 100%;
+    display: flex;
+    /* height: 30vh; */
+    flex-direction: column;
+    align-items: start;
+    padding-block: 7vh;
+    padding-inline: 2vw;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    margin-right: 100px;
+    opacity: 0%;
+    transition: 0.9s ease;
+    /* border: 1px solid goldenrod; */
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.w-mob-color-draping > h2 {
+    padding: 0px;
+    margin: 0px;
+    align-self: start;
+    letter-spacing: 3px;
+    text-align: center;
+    transition: 0.8s;
+    margin-bottom: 0px;
+    font-size: 18px;
+    margin-bottom: 18px;
+    width: 100%;;
+    text-align: center;
 }
 
 .conveyor{
@@ -134,16 +205,16 @@
     width:100%;
     overflow-x: auto;
     flex-wrap: nowrap !important;
-    padding-block: 30px;
+    padding-block: 5px;
 }
 .conveyor-item{
     /* border: 4px dashed rgb(93, 93, 93); */
     /* border-radius: 50%; */
     
     /* background-color: aqua; */
-    width: 130px;
-    height: 130px;
-    margin-right: 60px;
+    width: 120px;
+    height:120px;
+    margin-right: 5vw;
     flex-shrink: 0;
     cursor: pointer;
 
@@ -153,8 +224,8 @@
     justify-content: center;
 }
 .hex-layers-wrap{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;

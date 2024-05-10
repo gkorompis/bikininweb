@@ -143,7 +143,7 @@ const AppNavbarOther = ({styles}:any) =>{
             <div>
                 <div className={`${"burger-collapsed "} ${(isBurgerCollapsed ? "" : "burger-collapsed-hide")}`}>
                     <ul className={`${windowWidthClass}-app-navbar-ul-bruger-collapsed`}>
-                         <h3 style={styleAppNavbarOtherAnchors}>bikinin</h3>
+                        <h3 style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/")}>bikinin</h3>
                         <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate("/referensi-design")}>referensi design</p></li>
                         <li><p style={styleAppNavbarOtherAnchors} onClick={()=>handleNavigate('/layanan')}>layanan bikinin</p></li>
                         <li><p style={styleAppNavbarOtherAnchors} onClick={handleButtonRequestMeeting}>request meeting</p></li>

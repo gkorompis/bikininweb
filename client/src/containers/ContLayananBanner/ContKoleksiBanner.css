@@ -16,6 +16,7 @@
     box-sizing: border-box;
 }
 .w-pc-cont-koleksi-banner{
+    padding-top: 19vh;
     height: 40vh;
     width: 100vw;
     /* background-color: #76ABAE ; */
@@ -61,12 +62,13 @@
 
 .w-tab-cont-koleksi-banner {
     /* height: 35vh; */
-    margin-top: 10vh;
+    padding-top: 10vh;
     margin-bottom:3vh;
     width: 100vw;
     /* background-color: #76ABAE ; */
     /* color: #fff; */
     color: #31363F;
+
 
     display: flex;
     flex-direction: column;
@@ -108,7 +110,7 @@
 
 .w-mob-cont-koleksi-banner {
     /* height: 35vh; */
-    margin-top: 8vh;
+    padding-top: 20vh;
     margin-bottom: 3vh;
     width: 100vw;
     /* background-color: #76ABAE ; */

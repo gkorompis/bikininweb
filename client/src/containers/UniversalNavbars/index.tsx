@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import globalStates from "../../utils/global";
 import "./UniversalNavbars.css";
+import { IconBurger1 } from "../../assets/photos";
 
 const UniversalNavbars = ({data}:any) =>{
     const navbarTitle = (data && data.title) || "bikinin";
@@ -20,7 +21,7 @@ const UniversalNavbars = ({data}:any) =>{
 
     return (
         <>
-            <div className={`${windowWidthClass}-universal-navbars  ${scrolled ? "navbar-scrolled-true" : ""}`}>
+            <div className={`${windowWidthClass}-universal-navbars  ${scrolled ? `${windowWidthClass}-navbar-scrolled-true` : ""}`}>
                 <div className="navbars-group navbar-col-1">
 
                 </div>
@@ -28,9 +29,21 @@ const UniversalNavbars = ({data}:any) =>{
                     <h1>{navbarTitle}</h1>
                 </div>
                 <div className="navbars-group navbar-col-3">
-                    <p>home</p>
-                    <p>menu</p>
-                    <p>specials</p>
+                    { 
+                        windowWidthClass === "w-mob" ?
+                        (
+                            scrolled ? 
+                                <img src={IconBurger1}/>
+                            : null
+                        )
+                        :
+                        <>
+                            <p>home</p>
+                            <p>menu</p>
+                            <p>specials</p>
+                        </> 
+                    }
+                    
                 </div>
             </div>
         </>

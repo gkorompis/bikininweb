@@ -13,5 +13,8 @@ export { default as UniversalNavbarBlur } from './UniversalNavbarBlur'
 
 export { default as UniversalNavbars } from './UniversalNavbars'
 export { default as FABGrid } from './FABGrid'
-
 export { default as UniversalFooter } from './UniversalFooter'
+
+export { default as UniversalNavbar2 } from './UniversalNavbar2'
+
+export { default as CompanyCarousel } from './CompanyCarousel'

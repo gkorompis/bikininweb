@@ -3,6 +3,7 @@ import "./ContScreenCategory.css";
 import globalStates from "../../utils/global";
 import { useContext } from "react";
 import { CardPreview1, CardPreview2 } from "../../assets/photos";
+import { useNavigate } from "react-router-dom";
 
 const ContScreenCategory = ({styles}:any) =>{
     const styleCategoryCardboxItem = (styles && styles.styleCategoryCardboxItem) || {};
@@ -10,19 +11,23 @@ const ContScreenCategory = ({styles}:any) =>{
     const previewList = [
         {
             desainName: "goods and wears",
-            imgSrc: CardPreview1
+            imgSrc: CardPreview1,
+            route: "/referensi-design/goods-and-wears"
         },
         {
             desainName: "food and beverages",
-            imgSrc: CardPreview2
+            imgSrc: CardPreview2,
+            route: "/referensi-design/foods-and-beverages"
         },
         {
             desainName: "music lesson",
-            imgSrc: CardPreview1
+            imgSrc: CardPreview1,
+            route: "/referensi-design/goods-and-wears"
         }, 
         {
             desainName: "music lesson",
-            imgSrc: CardPreview2
+            imgSrc: CardPreview2,
+            route: "/referensi-design/foods-and-beverages"
         }
     ]
 
@@ -30,6 +35,11 @@ const ContScreenCategory = ({styles}:any) =>{
     const globalContext:any = useContext(context);
     const windowWidthClass = globalContext && globalContext.windowWidthClass
 
+    const navigate = useNavigate();
+    const handleDesignCard = (route:string) =>{
+        navigate(route);
+        window.scrollTo(0, 0);
+    }
     return(
         <>
             <section className={`${windowWidthClass}-landing-page-section-screen-category`}>
@@ -43,10 +53,10 @@ const ContScreenCategory = ({styles}:any) =>{
                 <div className={`${windowWidthClass}-section-screen-category ${windowWidthClass}-section-screen-category-cardbox`}>
                     {
                         previewList && previewList.map((preview: any, index: any)=>{
-                            const {imgSrc, desainName} = preview;
+                            const {imgSrc, desainName, route} = preview;
                             return(
                                 
-                                    <div key={index} className={`${windowWidthClass}-screen-category-cardbox-item`} style={styleCategoryCardboxItem}>
+                                    <div key={index} className={`${windowWidthClass}-screen-category-cardbox-item`} style={styleCategoryCardboxItem} onClick={()=>handleDesignCard(route)}>
                                         <img src={imgSrc}/>
                                         <p>{desainName}</p>
                                     </div>

@@ -1,3 +1,4 @@
+/* ------------------------------------------- PC VIEW */
 .w-pc-universal-footer {
     display: flex;
     flex-direction: column;
@@ -49,4 +50,151 @@
     /* border: 1px solid red; */
     margin-block: 4px;
     font-size: 13px;
+}
+
+
+
+
+
+/* ------------------------------------------- TAB VIEW */
+.w-tab-universal-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* border: 1px solid orange; */
+    padding-block: 7vh;
+    background-color: rgb(45, 45, 45);
+}
+
+.w-tab-universal-footer>* {
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+.w-tab-universal-footer>.footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.w-tab-universal-footer>.footer-logo>h1 {
+    text-align: center;
+    font-size: 9vh;
+    padding-bottom: 5vh;
+    color: #fff;
+    cursor: pointer;
+}
+
+.w-tab-universal-footer>.footer-anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.w-tab-universal-footer>.footer-anchors>.anchors-group {
+    margin-inline: 5vw;
+}
+
+.w-tab-universal-footer>.footer-anchors>.anchors-group>div {
+    /* border: 1px solid red; */
+    width: 100%;
+}
+
+.w-tab-universal-footer>.footer-anchors>.anchors-group>div>* {
+    /* border: 1px solid red; */
+    color: #fff;
+    text-align: start;
+    cursor: pointer;
+}
+
+.w-tab-universal-footer>.footer-anchors>.anchors-group>div>h3 {
+    /* border: 1px solid red; */
+    margin-block: 10px;
+    text-align: center;
+}
+
+.w-tab-universal-footer>.footer-anchors>.anchors-group>div>p {
+    /* border: 1px solid red; */
+    margin-block: 4px;
+    font-size: 13px;
+}
+
+
+
+
+
+/* ------------------------------------------- MOB VIEW */
+.w-mob-universal-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    /* border: 1px solid orange; */
+    padding-block: 7vh;
+    background-color: rgb(45, 45, 45);
+}
+
+.w-mob-universal-footer>* {
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+.w-mob-universal-footer>.footer-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.w-mob-universal-footer>.footer-logo>h1 {
+    text-align: center;
+    font-size: 6vh;
+    padding-bottom: 5vh;
+    color: #fff;
+    cursor: pointer;
+}
+
+.w-mob-universal-footer>.footer-anchors {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    row-gap: 20px;
+}
+
+.w-mob-universal-footer>.footer-anchors>.anchors-group {
+    margin-inline: 5vw;
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
+.w-mob-universal-footer>.footer-anchors>.anchors-group>div {
+    border: 1px solid rgba(255, 0, 0, 0);
+    width: 100%;
+    box-sizing: border-box;
+    /* padding-left: 38%; */
+}
+
+.w-mob-universal-footer>.footer-anchors>.anchors-group>div>* {
+    /* border: 1px solid red; */
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.w-mob-universal-footer>.footer-anchors>.anchors-group>div>h3 {
+    /* border: 1px solid red; */
+    margin-block: 10px;
+    /* text-align: center; */
+    
+}
+
+.w-mob-universal-footer>.footer-anchors>.anchors-group>div>p {
+    /* border: 1px solid red; */
+    margin-block: 4px;
+    font-size: 13px;
+    /* border: 1px solid red; */
+    /* text-align: center; */
 }

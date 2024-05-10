@@ -1,0 +1,9 @@
+/* ----- PC VIEW */
+
+.w-pc-company-carousel{
+    border: 1px solid salmon;
+}
+
+.w-pc-company-carousel>img{
+    width: 100%;
+}

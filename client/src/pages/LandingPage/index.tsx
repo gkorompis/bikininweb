@@ -78,7 +78,7 @@ const LandingPage = () => {
                     
 
                     <div className={(windowWidthClass+"-color-draping") + (isPageReady ? " section-show" : "")}>
-                        <h2 className={`${scrolled ? `${windowWidthClass}-opacity-show` : `${windowWidthClass}-opacity-hide`}`} style={(pallate && pallate.appNavbarTitle)}>c oba klik salah satu colorbox</h2>
+                        <h2 className={`${scrolled ? `${windowWidthClass}-opacity-show` : `${windowWidthClass}-opacity-hide`}`} style={(pallate && pallate.appNavbarTitle)}>coba klik salah satu colorbox</h2>
                         <div className="conveyor">
                             {
                                 pallateNames.map((name:any, index:any )=> {

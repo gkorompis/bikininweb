@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 const UniversalFooter = ({data}:any) =>{
     const footerTitle = (data && data.title) || "bikinin";
+    const parentStyle = (data && data.parentStyle) || {};
     const navigate = useNavigate();
     
     const context = globalStates && globalStates.globalContext;
@@ -18,7 +19,7 @@ const UniversalFooter = ({data}:any) =>{
 
     return(
         <>
-            <div className={`${windowWidthClass}-universal-footer`}>
+            <div className={`${windowWidthClass}-universal-footer`} style={parentStyle}>
                 <div className="footer-logo">
                     <h1>{footerTitle}</h1>
                 </div>

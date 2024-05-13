@@ -12,11 +12,13 @@ const CompanyCarousel = ({data}:any) =>{
     return(
         <>
             <div className={`${windowWidthClass}-company-carousel`}>
-                
                 <UniversalNavbar2 data={{
                     title: "Beat Well"
                 }}/>
                 <img src={imgSrcs[0]}/>
+                <div className="carousel-wrapper">
+                    <h1>Healthy heartbeat <br/> to welcome tomorrow morning</h1>
+                </div>
             </div>
         </>
     )

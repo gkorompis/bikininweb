@@ -1,8 +1,8 @@
 import { useContext } from 'react';
 import './CompanyPage.css';
 import globalStates from '../../utils/global';
-import { CompanyCarousel, UniversalNavbar2, UniversalNavbars } from '../../containers';
-import { Obat1, Obat2 } from '../../assets/photos';
+import { CompanyCarousel, CompanyServiceTray, UniversalFooter } from '../../containers';
+import { Obat2 } from '../../assets/photos';
 
 const CompanyPage = () =>{
 
@@ -19,6 +19,15 @@ const CompanyPage = () =>{
                 <CompanyCarousel data={{
                     imgSrcs
                 }}/>
+                <CompanyServiceTray/>
+                <UniversalFooter
+                    data={{
+                        title: "beat well",
+                        parentStyle: {
+                            backgroundColor: 'black'
+                        }
+                    }} 
+                />
                 {/* <img src={Obat1}/> */}
                 {/* <UniversalNavbar2 data={{
                     title: "Beat Well"
@@ -27,7 +36,6 @@ const CompanyPage = () =>{
                 <p>Know The Symptomps</p>
                 <p>Know The Risk</p>
                 <p>Consultation</p> */}
-                
             </div>
         </>
     )

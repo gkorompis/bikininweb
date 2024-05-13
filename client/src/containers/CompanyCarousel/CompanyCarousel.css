@@ -1,9 +1,75 @@
 /* ----- PC VIEW */
 
 .w-pc-company-carousel{
-    border: 1px solid salmon;
+    /* border: 1px solid salmon; */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    
 }
 
-.w-pc-company-carousel>img{
-    width: 100%;
+/* carousel img */
+.w-pc-company-carousel>img {
+    width: 110%;
+    position: absolute;
 }
+
+/* carousel wrappper */
+.w-pc-company-carousel>.carousel-wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding-block: 0vh;
+    padding-inline: 20vh;
+    padding-top: 28vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    border: 1px solid red;
+}
+.w-pc-company-carousel>.carousel-wrapper>h1{
+    font-size: 50px;
+    color: #fff;
+}
+
+/* ----- TAB VIEW */
+
+.w-tab-company-carousel {
+    /* border: 1px solid salmon; */
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+
+}
+
+/* carousel img */
+.w-tab-company-carousel>img {
+    height: 100%;
+    position: absolute;
+}
+
+/* carousel wrappper */
+.w-tab-company-carousel>.carousel-wrapper {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    padding-block: 0vh;
+    padding-inline: 8vh;
+    padding-block: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    /* border: 1px solid red; */
+}
+
+.w-tab-company-carousel>.carousel-wrapper>h1 {
+    font-size: 50px;
+    color: #fff;
+}
+

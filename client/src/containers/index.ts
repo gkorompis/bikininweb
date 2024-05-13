@@ -18,3 +18,5 @@ export { default as UniversalFooter } from './UniversalFooter'
 export { default as UniversalNavbar2 } from './UniversalNavbar2'
 
 export { default as CompanyCarousel } from './CompanyCarousel'
+
+export { default as CompanyServiceTray } from './CompanyServiceTray'

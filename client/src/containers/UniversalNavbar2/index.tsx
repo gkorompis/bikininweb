@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import globalStates from "../../utils/global";
 import "./UniversalNavbar2.css";
 
@@ -10,9 +10,24 @@ const UniversalNavbars2 = ({data}:any) =>{
     const globalContext:any = useContext(context);
     const windowWidthClass = globalContext && globalContext.windowWidthClass;
 
+    const [scrolled, setScrolled] = useState(false);;
+
+    console.log(scrolled)
+    useEffect(()=>{
+        const handleScroll = () => {
+            const scrolled = window.scrollY > 0;
+            setScrolled(scrolled);  
+        };
+        window.addEventListener('scroll', handleScroll);
+
+        return()=>{
+             window.removeEventListener('scroll', handleScroll);
+        }
+    },[scrolled]);
+
     return (
         <>
-            <nav className={`${windowWidthClass}-universal-navbar-2`}>
+            <nav className={`${windowWidthClass}-universal-navbar-2` + " " + `${(scrolled ? windowWidthClass : "")}-universal-navbar-2-border`}>
                 <div className="group-anchors col-1">
                     <h1>
                         {titleBar}

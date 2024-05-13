@@ -26,3 +26,7 @@ export { default as Obat3 } from './company/beatwell-3.jpg'
 export { default as Obat4 } from './company/beatwell-4.jpg'
 export { default as Obat5 } from './company/beatwell-5.jpg'
 export { default as Obat6 } from './company/beatwell-6.jpg'
+
+export { default as ServiceRisk } from './company/service-risk.png'
+export { default as ServiceDoctor } from './company/service-consultation.png'
+export { default as ServicePerson } from './company/service-personalized.png'
